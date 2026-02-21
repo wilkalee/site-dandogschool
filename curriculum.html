@@ -1,175 +1,72 @@
-<!DOCTYPE html>
-
-<html class="dark" lang="zh-TW"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>DanDan's Dog School - Curriculum</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+!DOCTYPE html
+html class=dark lang=zh-TW
+head
+    meta charset=utf-8
+    meta content=width=device-width, initial-scale=1.0 name=viewport
+    title課程規劃 - 阿丹的狗學堂title
+    script src=httpscdn.tailwindcss.complugins=forms,container-queriesscript
+    link href=httpsfonts.googleapis.comcss2family=Lexendwght@300;400;500;600;700;800&display=swap rel=stylesheet
+    link href=httpsfonts.googleapis.comcss2family=Material+Symbols+Outlinedwght,FILL@100..700,0..1&display=swap rel=stylesheet
+    script id=tailwind-config
         tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#c3a474",
-                        "background-light": "#191a1c",
-                        "background-dark": "#191a1c",
-                        "accent-brass": "#c3a474",
-                        "pure-white": "#fdfefe"
-                    },
-                    fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
+            darkMode class,
+            theme {
+                extend {
+                    colors { primary #c3a474, background-dark #191a1c, card-dark #222427 },
+                    fontFamily { display [Lexend, sans-serif] },
                 },
             },
         }
-    </script>
-<style>
-        body {
-            font-family: 'Lexend', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
-</head>
-<body class="bg-background-dark text-pure-white">
-<div class="relative flex min-h-screen w-full flex-col max-w-[480px] mx-auto bg-background-dark shadow-xl overflow-x-hidden">
-<!-- Header -->
-<div class="sticky top-0 z-10 flex items-center bg-background-dark/95 backdrop-blur-md p-4 border-b border-primary/20 justify-between">
-<div class="text-primary flex size-10 shrink-0 items-center justify-center rounded-full hover:bg-primary/10 transition-colors cursor-pointer">
-<span class="material-symbols-outlined">arrow_back</span>
-</div>
-<h2 class="text-pure-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Curriculum</h2>
-<div class="flex w-10 items-center justify-end">
-<button class="flex items-center justify-center rounded-full size-10 hover:bg-primary/10 transition-colors">
-<span class="material-symbols-outlined text-primary">share</span>
-</button>
-</div>
-</div>
-<!-- Hero Section -->
-<div class="@container">
-<div class="px-4 py-4">
-<div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-xl min-h-[220px] shadow-lg group" data-alt="A golden retriever dog sitting calmly during training session" style='background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 60%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuA9jq3YGFxk4gIAF2vAQ7stLxjoLn86lRbaU8nwQ47fVu1KG9lt5TuyjFfTeDMz2LiJbcqj_Fv8qaFSJdcY1h8mLjhO1O6AafWdz4reb3iHAiAfqrc8rSH45QAvlY-OaaPqH9pOhbp8NmkH67t6XaBxPe6kt7MESOBG_Gh5EPw5Oi4hPy7O9A44u0kWjJ8DsPufolSbAq3IMqpBw5050kMOKLHeNhUnf-EaFSOq2wzrE_hnHVst6PxQnBjEOIAqHVWug7IhiJ9lk-4K");'>
-<div class="p-6">
-<span class="bg-primary text-background-dark text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded mb-2 inline-block">10-Week Course</span>
-<h1 class="text-white text-2xl font-bold leading-tight drop-shadow-md">成犬 10 週基礎教育-新手班</h1>
-<p class="text-white/80 text-sm mt-1">Adult Dog 10-Week Basic Education</p>
-</div>
-</div>
-</div>
-</div>
-<!-- Locations -->
-<div class="px-4 py-2">
-<h3 class="text-primary text-sm font-bold uppercase tracking-wider mb-3">Training Locations</h3>
-<div class="flex flex-wrap gap-2">
-<div class="flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 border border-primary/30">
-<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
-<span class="text-pure-white text-xs font-medium">永和綠光河岸公園</span>
-</div>
-<div class="flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 border border-primary/30">
-<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
-<span class="text-pure-white text-xs font-medium">中和四號公園</span>
-</div>
-<div class="flex items-center gap-1.5 rounded-full bg-primary/10 px-3 py-1.5 border border-primary/30">
-<span class="material-symbols-outlined text-primary text-[18px]">location_on</span>
-<span class="text-pure-white text-xs font-medium">臺灣大學</span>
-</div>
-</div>
-</div>
-<!-- Timeline Section -->
-<div class="px-4 pt-6 pb-24">
-<div class="flex items-center justify-between mb-6">
-<h3 class="text-pure-white text-xl font-bold">Weekly Roadmap</h3>
-<span class="text-primary text-sm font-medium">10 Modules</span>
-</div>
-<div class="space-y-6 relative before:absolute before:left-[19px] before:top-2 before:bottom-2 before:w-[2px] before:bg-primary/30">
-<!-- Week 1 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold text-sm z-10 border-4 border-background-dark shadow-sm">1</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 1: 初次見面</h4><p class="text-xs text-pure-white/70">Meet &amp; Sit - 建立信任與基本坐下指令。</p></div>
-</div>
-<!-- Week 2-3 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">2</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 2: 隨行與等待</h4><p class="text-xs text-pure-white/70">Walking &amp; Stay - 學習在牽繩下正確隨行與穩定待命。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">3</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 3: 社交禮儀</h4><p class="text-xs text-pure-white/70">Social Manners - 學習如何與其他狗狗及陌生人禮貌互動。</p></div>
-</div>
-<!-- Week 4-9 (Simplified for layout) -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">4</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 4: 指令強化</h4><p class="text-xs text-pure-white/70">Command Reinforcement - 強化召回指令與進階服從。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">5</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 5: 戶外適應</h4><p class="text-xs text-pure-white/70">Outdoor Adaptation - 在有干擾的戶外環境中保持專注。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">6</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 6: 特殊狀況處理</h4><p class="text-xs text-pure-white/70">Special Situations - 應對突發噪音、交通工具等減敏訓練。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">7</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 7: 深度溝通</h4><p class="text-xs text-pure-white/70">Deep Communication - 解讀狗狗肢體語言，強化飼主連結。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">8</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 8: 技巧進階</h4><p class="text-xs text-pure-white/70">Advanced Skills - 穩定性練習與遠距指令傳達。</p></div>
-</div>
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold text-sm z-10 border-4 border-background-dark shadow-sm">9</div>
-<div class="bg-white/5 p-4 rounded-xl border border-primary/20"><h4 class="font-bold text-pure-white mb-1">Week 9: 總複習</h4><p class="text-xs text-pure-white/70">Total Review - 整合前八週所學內容，準備結業測驗。</p></div>
-</div>
-<!-- Week 10 -->
-<div class="relative pl-12">
-<div class="absolute left-0 top-1 size-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-bold text-sm z-10 border-4 border-background-dark shadow-sm">
-<span class="material-symbols-outlined text-[20px]">workspace_premium</span>
-</div>
-<div class="bg-primary/10 p-4 rounded-xl border-2 border-primary"><div class="flex justify-between items-start">
-<h4 class="font-bold text-pure-white mb-1">Week 10: 身體減敏照護</h4>
-<span class="bg-primary text-background-dark text-[10px] font-bold uppercase tracking-widest px-2 py-1 rounded mb-2 inline-block">FINAL</span>
-</div>
-<p class="text-sm text-pure-white/70">Body Care: 嘴套、剪指甲、胸背帶與梳毛減敏（Muzzle, Nails, Harness, Brushing）與結業測驗。</p></div>
-</div>
-</div>
-</div>
-<!-- Sticky Bottom Navigation -->
-<div class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] bg-background-dark/95 backdrop-blur-md border-t border-primary/20 z-20">
-<div class="flex gap-2 px-4 pb-4 pt-2">
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-pure-white/60 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">home</span>
-<p class="text-[10px] font-medium leading-normal tracking-wider">Home</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-primary" href="#">
-<span class="material-symbols-outlined font-fill">book_2</span>
-<p class="text-[10px] font-bold leading-normal tracking-wider">Curriculum</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-pure-white/60 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">calendar_month</span>
-<p class="text-[10px] font-medium leading-normal tracking-wider">Schedule</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-end gap-1 text-pure-white/60 hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined">person</span>
-<p class="text-[10px] font-medium leading-normal tracking-wider">Profile</p>
-</a>
-</div>
-</div>
-</div>
-</body></html>
+    script
+    style
+        body { font-family 'Lexend', sans-serif; background-color #191a1c; -webkit-tap-highlight-color transparent; }
+        .material-symbols-outlined { font-variation-settings 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    style
+head
+body class=bg-background-dark text-[#fdfefe] font-display
+    div class=relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark
+        header class=sticky top-0 z-50 flex items-center bg-background-dark90 backdrop-blur-md border-b border-primary20 p-4 justify-between
+            button onclick=window.location.href='index.html' class=flex size-10 items-center justify-center rounded-full hoverbg-primary10 cursor-pointer transition-colors text-primary
+                span class=material-symbols-outlinedarrow_backspan
+            button
+            h1 class=text-[#fdfefe] font-bold tracking-tight text-lg課程規劃h1
+            div class=w-10div
+        header
+
+        main class=flex-1 pb-32
+            section class=p-4
+                div class=relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-2xl min-h-[220px] shadow-lg style='background-image linear-gradient(to top, rgba(25, 26, 28, 0.8) 0%, rgba(0, 0, 0, 0) 60%), url(httpslh3.googleusercontent.comaida-publicAB6AXuA9jq3YGFxk4gIAF2vAQ7stLxjoLn86lRbaU8nwQ47fVu1KG9lt5TuyjFfTeDMz2LiJbcqj_Fv8qaFSJdcY1h8mLjhO1O6AafWdz4reb3iHAiAfqrc8rSH45QAvlY-OaaPqH9pOhbp8NmkH67t6XaBxPe6kt7MESOBG_Gh5EPw5Oi4hPy7O9A44u0kWjJ8DsPufolSbAq3IMqpBw5050kMOKLHeNhUnf-EaFSOq2wzrE_hnHVst6PxQnBjEOIAqHVWug7IhiJ9lk-4K);'
+                    div class=p-6
+                        h2 class=text-white text-2xl font-black italic成犬 10 週基礎教育h2
+                    div
+                div
+            section
+        main
+
+        nav class=fixed bottom-0 left-12 -translate-x-12 w-full max-w-2xl bg-background-dark95 backdrop-blur-md border-t border-primary20 px-4 pb-8 pt-4 z-[100] shadow-2xl
+            div class=flex justify-around items-end
+                a class=flex flex-col items-center gap-1.5 text-white40 hovertext-primary transition-all href=index.html
+                    span class=material-symbols-outlinedhomespan
+                    p class=text-[10px] font-bold uppercase tracking-widest首頁p
+                a
+                a class=flex flex-col items-center gap-1.5 text-primary href=curriculum.html
+                    span class=material-symbols-outlined style=font-variation-settings 'FILL' 1;schoolspan
+                    p class=text-[10px] font-bold uppercase tracking-widest課程規劃p
+                a
+                a class=flex flex-col items-center gap-1.5 text-white40 hovertext-primary transition-all href=blog.html
+                    span class=material-symbols-outlinedarticlespan
+                    p class=text-[10px] font-bold uppercase tracking-widest訓練專欄p
+                a
+                a class=flex flex-col items-center gap-1.5 text-white40 hovertext-primary transition-all href=preparation.html
+                    span class=material-symbols-outlinedassignment_turned_inspan
+                    p class=text-[10px] font-bold uppercase tracking-widest課前準備p
+                a
+                a class=flex flex-col items-center gap-1.5 text-white40 hovertext-primary transition-all href=booking.html
+                    span class=material-symbols-outlinedcalendar_todayspan
+                    p class=text-[10px] font-bold uppercase tracking-widest預約課程p
+                a
+            div
+        nav
+    div
+body
+html

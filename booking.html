@@ -3,7 +3,6 @@ import React from 'react';
 // --- 輔助組件：課程卡片 ---
 const CourseCard = ({ title, price, tag, btnText, message }) => {
   const lineId = "@370vbzff";
-  // 建立 LINE 跳轉連結與預填文字
   const encodedMsg = encodeURIComponent(message);
   const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodedMsg}`;
 
@@ -19,12 +18,7 @@ const CourseCard = ({ title, price, tag, btnText, message }) => {
         <span className="text-[#c3a474] text-5xl font-black italic tracking-tighter">{price}</span>
         <span className="text-white/60 font-bold text-sm italic">元</span>
       </div>
-      <a 
-        href={lineUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase"
-      >
+      <a href={lineUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
         {btnText}
       </a>
     </div>
@@ -33,83 +27,41 @@ const CourseCard = ({ title, price, tag, btnText, message }) => {
 
 export default function App() {
   const courses = [
-    { 
-      title: "第一堂諮詢優惠價", 
-      price: "1,000", 
-      tag: "Offer", 
-      btnText: "立即聯繫預約", 
-      message: "🐾 阿丹老師您好！我想領取「第一堂諮詢優惠價」，想跟您討論狗狗目前的狀況並預約時間。" 
-    },
-    { 
-      title: "單堂訓練課程", 
-      price: "1,500", 
-      btnText: "馬上私訊預約", 
-      message: "🐾 阿丹老師您好！我想預約「單堂訓練課程」，想請問近期有哪些可預約時段？" 
-    },
-    { 
-      title: "10 週基礎教育課程", 
-      price: "12,000", 
-      tag: "Hot", 
-      btnText: "馬上預約報名", 
-      message: "🐾 阿丹老師您好！我對「10週基礎教育課程」有興趣，想諮詢課程詳情與排課時間。" 
-    },
-    { 
-      title: "到府教學 (一對一)", 
-      price: "2,500", 
-      btnText: "立即聯繫阿丹老師", 
-      message: "🐾 阿丹老師您好！我想諮詢「一對一到府教學」，我的所在地區在：\n狗狗目前遇到的狀況是：" 
-    }
+    { title: "第一堂諮詢優惠價", price: "1,000", tag: "Offer", btnText: "立即聯繫預約", message: "🐾 阿丹老師您好！我想領取「第一堂諮詢優惠價」，想預約諮詢。" },
+    { title: "單堂訓練課程", price: "1,500", btnText: "馬上私訊預約", message: "🐾 阿丹老師您好！我想預約「單堂訓練課程」，想請問可預約時段。" },
+    { title: "10 週基礎教育課程", price: "12,000", tag: "Hot", btnText: "馬上預約報名", message: "🐾 阿丹老師您好！我對「10週基礎教育課程」有興趣。" },
+    { title: "到府教學 (一對一)", price: "2,500", btnText: "立即聯繫阿丹老師", message: "🐾 阿丹老師您好！我想諮詢「一對一到府教學」。" }
+  ];
+
+  // 底欄連結必須 100% 正確
+  const navItems = [
+    { icon: 'home', label: '首頁', link: 'index.html' },
+    { icon: 'school', label: '課程規劃', link: 'curriculum.html' },
+    { icon: 'article', label: '訓練專欄', link: 'blog.html' },
+    { icon: 'assignment_turned_in', label: '課前準備', link: 'preparation.html' },
+    { icon: 'calendar_today', label: '預約課程', link: 'booking.html', active: true }
   ];
 
   return (
     <div className="bg-[#191a1c] text-[#fdfefe] font-display min-h-screen">
       <div className="max-w-2xl mx-auto border-x border-[#c3a474]/10 min-h-screen flex flex-col relative shadow-2xl bg-[#191a1c]">
         
-        {/* Header */}
         <header className="sticky top-0 z-50 flex items-center bg-[#191a1c]/90 backdrop-blur-md border-b border-[#c3a474]/20 p-4 justify-between">
-          <button onClick={() => window.location.href='index.html'} className="size-10 rounded-full hover:bg-[#c3a474]/10 flex items-center justify-center transition-colors">
-            <span className="material-symbols-outlined text-[#c3a474]">arrow_back</span>
+          <button onClick={() => window.location.href='index.html'} className="size-10 rounded-full hover:bg-[#c3a474]/10 flex items-center justify-center transition-colors text-primary">
+            <span className="material-symbols-outlined">arrow_back</span>
           </button>
-          <h1 className="text-lg font-bold tracking-tight italic uppercase tracking-widest text-[#c3a474]">阿丹的狗學堂</h1>
+          <h1 className="text-lg font-bold tracking-tight italic uppercase tracking-widest text-[#c3a474]">預約課程</h1>
           <div className="w-10"></div>
         </header>
 
-        <main className="flex-1 pb-40 px-4 space-y-10 mt-10">
-          <div className="text-center space-y-3">
-            <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white leading-tight">Join The Pack</h2>
-            <div className="flex flex-col items-center gap-1">
-                <p className="text-[#c3a474] font-medium italic text-xs tracking-widest uppercase opacity-80">專業引導，開啟您的訓練之旅</p>
-                <div className="h-0.5 w-12 bg-[#c3a474]/30 rounded-full mt-1"></div>
-            </div>
-            <p className="text-white/40 text-[10px] italic mt-4 max-w-[280px] mx-auto leading-relaxed">
-                點選下方課程按鈕將直接進入 LINE 對話框<br/>由阿丹老師親自為您安排上課時段與評估需求
-            </p>
-          </div>
-
-          {/* 課程列表區 */}
-          <div className="grid gap-8">
-            {courses.map((course, idx) => (
-              <CourseCard key={idx} {...course} />
-            ))}
-          </div>
-
-          {/* 聯絡資訊補充 */}
-          <div className="py-10 text-center space-y-4 opacity-50">
-            <span className="material-symbols-outlined text-[#c3a474] text-4xl">chat_bubble</span>
-            <p className="text-xs italic leading-loose">人工對話預約，讓訓練更有溫度<br/>我們將在對話中為您提供完整的付款指引</p>
-          </div>
+        <main className="flex-1 pb-40 px-4 space-y-10 mt-10 text-center">
+          <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Join The Pack</h2>
+          <div className="grid gap-8">{courses.map((course, idx) => (<CourseCard key={idx} {...course} />))}</div>
         </main>
 
-        {/* 底部導覽列 */}
         <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-[#191a1c]/95 backdrop-blur-md border-t border-[#c3a474]/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
           <div className="flex justify-around items-end">
-            {[
-              { icon: 'home', label: '首頁', link: 'index.html' },
-              { icon: 'school', label: '課程規劃', link: 'curriculum.html' },
-              { icon: 'article', label: '專欄', link: 'blog.html' },
-              { icon: 'assignment_turned_in', label: '準備', link: 'preparation.html' },
-              { icon: 'calendar_today', label: '預約', link: 'booking.html', active: true }
-            ].map((item, idx) => (
+            {navItems.map((item, idx) => (
               <a key={idx} href={item.link} className={`flex flex-col items-center gap-1 transition-all ${item.active ? 'text-[#c3a474]' : 'text-white/30 hover:text-[#c3a474]'}`}>
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: item.active ? "'FILL' 1" : "'FILL' 0" }}>{item.icon}</span>
                 <p className="text-[10px] font-bold uppercase tracking-widest">{item.label}</p>
@@ -118,12 +70,6 @@ export default function App() {
           </div>
         </nav>
       </div>
-
-      <style>{`
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        main { animation: fadeIn 0.6s ease-out; }
-      `}</style>
     </div>
   );
 }

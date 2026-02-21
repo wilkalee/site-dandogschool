@@ -1,193 +1,85 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="zh-TW"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>阿丹的狗學堂 - DanDan's Dog School</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="zh-TW">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>阿丹的狗學堂 - 首頁</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
-                    colors: {
-                        "primary": "#c3a474",
-                        "background-light": "#191a1c",
-                        "background-dark": "#191a1c",
-                        "accent-brass": "#c3a474",
-                        "carbon-black": "#191a1c"
-                    },
-                    fontFamily: {
-                        "display": ["Lexend", "sans-serif"]
-                    },
-                    borderRadius: {
-                        "DEFAULT": "0.25rem",
-                        "lg": "0.5rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
+                    colors: { "primary": "#c3a474", "background-dark": "#191a1c", "card-dark": "#222427" },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
                 },
             },
         }
     </script>
-<style>
-        body {
-            font-family: 'Lexend', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+    <style>
+        body { font-family: 'Lexend', sans-serif; background-color: #191a1c; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
-    }
-  </style>
 </head>
-<body class="bg-[#191a1c] text-[#fdfefe]">
-<!-- Main Container -->
-<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
-<!-- Header Navigation -->
-<header class="sticky top-0 z-50 flex items-center bg-[#191a1c]/90 backdrop-blur-sm p-4 justify-between border-b border-[#c3a474]/20">
-<div class="text-primary flex size-10 shrink-0 items-center justify-center">
-<span class="material-symbols-outlined text-3xl">pets</span>
-</div>
-<h1 class="text-xl font-bold leading-tight tracking-tight flex-1 ml-2 text-[#fdfefe]">阿丹的狗學堂</h1>
-<div class="flex items-center gap-2">
-<button class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 transition-colors">
-<span class="material-symbols-outlined text-[#fdfefe]">search</span>
-</button>
-<button class="flex items-center justify-center gap-2 bg-[#c3a474] text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-[#c3a474]/90 transition-all w-fit mt-2">
-<span class="material-symbols-outlined text-[#fdfefe]">person</span>
-</button>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="@container">
-<div class="@[480px]:px-4 @[480px]:py-4">
-<div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden bg-primary/20 @[480px]:rounded-xl min-h-[400px] shadow-lg" data-alt="Professional dog trainer interacting gently with a happy golden retriever" style='background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXHinxfyS8yfw8SppB_rCnscNslabvCVWHp7LjStEWLg6ScqvBQcJr6XFDHXHdavgF8UORcmw2rhU0zkKsFFSsnQaz-kYUU5E7EUZmnytrcHiskGHgxiqaOYquIPGQPBh9rTX2mUpDIHyxnj4SF6b0wiv8ZQWakwTIRCJsd5AL2EnWX8fMuI4KLUCkZYXLQEVeHkVFC84DMGRgm0cpAl1p3EKW0_3yA7FuE66Qtn81odBgsEvw2ZzjVLO9Y6VWI5LZnLzoOc1HXuoQ");'>
-<div class="flex flex-col p-6 gap-2 border-[#d9bc8c]/10">
-<span class="bg-primary text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full w-fit">Expert Training</span>
-<h2 class="text-white text-3xl font-bold leading-tight drop-shadow-md">Professional training for happy dogs and owners</h2>
-<p class="text-white/90 text-sm max-w-md">Building lifelong bonds through positive reinforcement and professional guidance.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Coach Introduction -->
-<section class="px-4 py-8">
-<div class="flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<div class="h-8.w-1.bg-[#c3a474] rounded-full"></div>
-<h3 class="text-2xl font-bold text-[#fdfefe]">Meet Coach DanDan</h3>
-</div>
-<div class="flex flex-col @[480px]:flex-row gap-6 bg-[#232426] p-6 rounded-xl shadow-sm border border-[#c3a474]/10">
-<div class="w-full @[480px]:w-1/3 aspect-square rounded-xl bg-center bg-cover border-4 border-primary/10" data-alt="Friendly portrait of dog trainer Coach DanDan smiling" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3IhaxIu3lPp7se4Hc5pGZdxfjwIan8gASy7S6gyxNYpDhoJZcUcO2pmJl118lYWHWTx0LWj9qtV1rbKsxtxEFtsQC9zoVTtPVJSpIykNMX4TUXA1hwh3Hcz6Q_KMKGGaaFZbZdmbXNqSdZhlUXv3RxuGMCbq9a3AHzukY4pACmvjxl9N_qTtAa9bxdD4SDuOspgT7VEqVKXLcbVOEAWS0h0Plyzvjr7JLsKXFJ1Cp9AOd90KjqHvyk0dJgw6YHXgB5yZ3KthjFXIB");'>
-</div>
-<div class="flex flex-1 flex-col justify-center gap-4 border-[#d9bc8c]/10">
-<div class="space-y-2">
-<h4 class="text-[#c3a474] text-xl font-bold">Professional &amp; Gentle</h4>
-<p class="text-white/80 text-base leading-relaxed">
-                                DanDan focuses on positive reinforcement to build a lifelong bond between you and your pet. With over 10 years of experience, our philosophy is rooted in understanding canine psychology and mutual respect.
-                            </p>
-</div>
-<div class="flex flex-wrap gap-2">
-<span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium">#PositiveReinforcement</span>
-<span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium">#BehaviorCorrection</span>
-<span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-sm font-medium">#PuppySocialization</span>
-</div>
-<button class="flex items-center justify-center gap-2 bg-[#c3a474] text-white px-6 py-3 rounded-lg font-bold shadow-md hover:bg-[#c3a474]/90 transition-all w-fit mt-2">
-<span>Read Our Philosophy</span>
-<span class="material-symbols-outlined text-sm">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Consultation QR Section -->
-<section class="px-4 py-8 bg-[#151618]">
-<div class="max-w-4xl mx-auto text-center space-y-8">
-<div class="space-y-2">
-<h3 class="text-2xl font-bold text-[#fdfefe]">Start Your Journey Today</h3>
-<p class="text-white/60">Scan or click to connect with us for a free consultation</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<!-- Facebook QR -->
-<div class="bg-[#232426] p-8 rounded-2xl shadow-sm border border-[#c3a474]/10 flex flex-col items-center gap-4 transition-transform hover:scale-[1.02]">
-<div class="size-12 bg-blue-600 rounded-full flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-3xl">social_leaderboard</span>
-</div>
-<h4 class="font-bold text-lg text-[#fdfefe]">Facebook Page</h4>
-<div class="size-40 bg-gray-100 rounded-lg p-2 border-2 border-blue-50 flex items-center justify-center" data-alt="Facebook messenger QR code for DanDan's Dog School" style="background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6), linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6); background-size: 20px 20px; background-position: 0 0, 10px 10px;">
-<div class="bg-[#232426] p-8 rounded-2xl shadow-sm border border-[#c3a474]/10 flex flex-col items-center gap-4 transition-transform hover:scale-[1.02]">
-<span class="material-symbols-outlined text-6xl text-blue-600">qr_code_2</span>
-</div>
-</div>
-<button class="w-full py-3 bg-blue-600 text-white rounded-xl font-bold">Follow on Facebook</button>
-</div>
-<!-- LINE QR -->
-<div class="bg-[#232426] p-8 rounded-2xl shadow-sm border border-[#c3a474]/10 flex flex-col items-center gap-4 transition-transform hover:scale-[1.02]">
-<div class="size-12 bg-green-500 rounded-full flex items-center justify-center text-white">
-<span class="material-symbols-outlined text-3xl">chat</span>
-</div>
-<h4 class="font-bold text-lg text-[#fdfefe]">LINE Official</h4>
-<div class="size-40 bg-gray-100 rounded-lg p-2 border-2 border-green-50 flex items-center justify-center" data-alt="Line official account QR code for consultation" style="background-image: linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6), linear-gradient(45deg, #f3f4f6 25%, transparent 25%, transparent 75%, #f3f4f6 75%, #f3f4f6); background-size: 20px 20px; background-position: 0 0, 10px 10px;">
-<div class="bg-[#232426] p-8 rounded-2xl shadow-sm border border-[#c3a474]/10 flex flex-col items-center gap-4 transition-transform hover:scale-[1.02]">
-<span class="material-symbols-outlined text-6xl text-green-500">qr_code_scanner</span>
-</div>
-</div>
-<button class="w-full py-3 bg-green-500 text-white rounded-xl font-bold">Add Line Friend</button>
-</div>
-</div>
-</div>
-</section>
-<!-- Services Preview -->
-<section class="px-4 py-8">
-<h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-<span class="material-symbols-outlined text-primary">school</span>
-                Training Programs
-            </h3>
-<div class="grid grid-cols-2 gap-4">
-<a class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-background-dark shadow-md" href="#">
-<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-110 transition-transform duration-500" data-alt="Small puppy in a training session" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZD4Ykm3JlVBqeOXyl369EAo0mhF1U0w-ECnv_NOKwDLDECXQWruBbb00CuJQG5mgyMUWVPOxhLWurSn-z9B1w72jnA3ENImuhrQrW0jsomQlfM_C20Ce-D-R5jFX3i6EZrXdroGZsr5FrGKjVeK8m-91m9wja1Zo0G8CqaCCuUHZLDHiD-5yzGbqn2a6KjHG6kiujf2TAm9bH1AgAVm8cbllLNqSMhkig0k7X0osZTDyiDAtU6HVgxsjkD3bJsdEG33OWI633Av7");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<div class="absolute bottom-4 left-4 right-4">
-<p class="text-white font-bold text-lg">Puppy Kinder</p>
-<p class="text-white/70 text-xs">For pups 2-6 months</p>
-</div>
-</a>
-<a class="group relative aspect-[4/5] rounded-xl overflow-hidden bg-background-dark shadow-md" href="#">
-<div class="absolute inset-0 bg-cover bg-center opacity-60 group-hover:scale-110 transition-transform duration-500" data-alt="Adult dog performing obedience tricks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAifbCUynDL2y6PZn4K7MewPQ9YfnQ9V2A-3-T3-rIEn_b9wu_XQDZF7yYURzU-Cc9A_5M4DRfk4K-dglQC4dgao-zyhSpMp5eCV-jNs8EsTHR7_C-vwx0UghKoGss-GXJHmOs3IH68k9UPpC3b1YsmM3jRJAVlMpr0rCZkvr8SWMVTQG_m2ae-m6G_iHm51uUn4chCPTOYmNaj6hA7hOhEoVARtFAEBpsUAy0w1dZFjru-2al2w_Hau3WYi5z956PmbjJb9NjxPdk1");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-<div class="absolute bottom-4 left-4 right-4">
-<p class="text-white font-bold text-lg">Adult Obedience</p>
-<p class="text-white/70 text-xs">Essential life skills</p>
-</div>
-</a>
-</div>
-</section>
-<div class="h-20 bg-[#191a1c]"></div>
-<!-- Bottom Navigation Bar -->
-<nav class="fixed bottom-0 left-0 right-0 z-50 flex border-t bg-[#191a1c]/95 backdrop-blur-md px-4 pb-4 pt-3 shadow-[0_-4px_10px_rgba(0,0,0,0.3)] border-[#c3a474]/20">
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[#c3a474]" href="#">
-<span class="material-symbols-outlined text-2xl font-bold" style="font-variation-settings: 'FILL' 1;">home</span>
-<p class="text-xs font-medium leading-normal tracking-wide text-white/70">Home</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[#7f776c] hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-2xl">school</span>
-<p class="text-xs font-medium leading-normal tracking-wide text-white/70">Courses</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[#7f776c] hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-2xl">auto_awesome</span>
-<p class="text-xs font-medium leading-normal tracking-wide text-white/70">Stories</p>
-</a>
-<a class="flex flex-1 flex-col items-center justify-center gap-1 text-[#7f776c] hover:text-primary transition-colors" href="#">
-<span class="material-symbols-outlined text-2xl">contact_support</span>
-<p class="text-xs font-medium leading-normal tracking-wide text-white/70">Contact</p>
-</a>
-</nav>
-</div>
-</body></html>
+<body class="bg-background-dark text-[#fdfefe] font-display">
+    <div class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        <header class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
+            <div class="text-primary flex size-10 items-center justify-center"><span class="material-symbols-outlined text-3xl">pets</span></div>
+            <h1 class="text-[#fdfefe] font-bold tracking-tight text-lg">阿丹的狗學堂</h1>
+            <button onclick="window.location.href='admin.html'" class="size-10 rounded-full hover:bg-primary/10 flex items-center justify-center transition-colors">
+                <span class="material-symbols-outlined text-primary">admin_panel_settings</span>
+            </button>
+        </header>
+
+        <main class="flex-1 pb-32">
+            <section class="p-4">
+                <div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-2xl min-h-[400px] shadow-lg" style='background-image: linear-gradient(to top, rgba(25, 26, 28, 0.9) 0%, rgba(25, 26, 28, 0.2) 50%, rgba(25, 26, 28, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXHinxfyS8yfw8SppB_rCnscNslabvCVWHp7LjStEWLg6ScqvBQcJr6XFDHXHdavgF8UORcmw2rhU0zkKsFFSsnQaz-kYUU5E7EUZmnytrcHiskGHgxiqaOYquIPGQPBh9rTX2mUpDIHyxnj4SF6b0wiv8ZQWakwTIRCJsd5AL2EnWX8fMuI4KLUCkZYXLQEVeHkVFC84DMGRgm0cpAl1p3EKW0_3yA7FuE66Qtn81odBgsEvw2ZzjVLO9Y6VWI5LZnLzoOc1HXuoQ");'>
+                    <div class="p-6">
+                        <span class="bg-primary text-background-dark text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit">Expert Dog Trainer</span>
+                        <h2 class="text-white text-3xl font-black mt-2 leading-tight">耐心是訓練的唯一源頭</h2>
+                        <p class="text-white/80 text-sm mt-2">透過正向強化建立終身的情感連結。</p>
+                    </div>
+                </div>
+            </section>
+            <section class="px-4 py-6">
+                <div class="bg-card-dark p-6 rounded-2xl border border-primary/10">
+                    <h3 class="text-xl font-bold text-primary mb-4 italic">關於阿丹老師</h3>
+                    <p class="text-white/70 text-base leading-relaxed mb-6">我們相信理解與尊重是改變行為的關鍵。</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-bold">#正向強化</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-bold">#行為糾正</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- 導覽列 -->
+        <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+            <div class="flex justify-around items-end">
+                <a class="flex flex-col items-center gap-1.5 text-primary" href="index.html">
+                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">首頁</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="curriculum.html">
+                    <span class="material-symbols-outlined">school</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">課程規劃</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="blog.html">
+                    <span class="material-symbols-outlined">article</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="preparation.html">
+                    <span class="material-symbols-outlined">assignment_turned_in</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">課前準備</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="booking.html">
+                    <span class="material-symbols-outlined">calendar_today</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">預約課程</p>
+                </a>
+            </div>
+        </nav>
+    </div>
+</body>
+</html>
