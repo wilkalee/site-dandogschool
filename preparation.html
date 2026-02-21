@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html class="dark" lang="zh-TW">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>課前準備 - 阿丹的狗學堂</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -19,52 +22,112 @@
         }
     </script>
     <style>
-        body { font-family: 'Lexend', sans-serif; background-color: #191a1c; -webkit-tap-highlight-color: transparent; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #191a1c;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
 </head>
+
 <body class="bg-background-dark text-[#fdfefe] font-display">
-    <div class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
-        <header class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
-            <button onclick="window.location.href='index.html'" class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
+    <div
+        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        <header
+            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
+            <button onclick="window.location.href='index.html'"
+                class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
                 <span class="material-symbols-outlined">arrow_back</span>
             </button>
             <h1 class="text-[#fdfefe] font-bold tracking-tight text-lg">課前準備</h1>
             <div class="w-10"></div>
         </header>
 
-        <main class="flex-1 pb-48 p-4">
-            <div class="bg-primary/10 border-l-4 border-primary p-6 rounded-r-3xl">
-                <h3 class="font-black text-primary text-xl italic uppercase tracking-tighter italic">Fast Before Class / 禁食通知</h3>
-                <p class="text-sm text-white/70 mt-2 leading-relaxed italic">請確保課前 <span class="text-primary font-bold underline">4 小時停止餵食</span>。</p>
-            </div>
+        <main class="flex-1 pb-48">
+            <section class="p-4 space-y-6">
+                <div class="bg-primary/10 border-l-4 border-primary p-6 rounded-r-3xl shadow-lg">
+                    <div class="flex gap-4">
+                        <span class="material-symbols-outlined text-primary text-4xl">notification_important</span>
+                        <div>
+                            <h3 class="font-black text-primary text-xl italic uppercase tracking-tighter">Fast Before
+                                Class / 禁食通知</h3>
+                            <p class="text-sm text-white/70 mt-2 leading-relaxed italic">
+                                請確保課前 <span class="text-primary font-bold underline underline-offset-4">4 小時停止餵食</span>。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 pt-4">
+                    <h4 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">Essential Items
+                        / 必備清單</h4>
+
+                    <label
+                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
+                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
+                            type="checkbox" />
+                        <p
+                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
+                            準備 1-2 種超愛的小塊食物</p>
+                    </label>
+
+                    <label
+                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
+                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
+                            type="checkbox" />
+                        <p
+                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
+                            佩戴胸背帶 (Harness)</p>
+                    </label>
+
+                    <label
+                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
+                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
+                            type="checkbox" />
+                        <p
+                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
+                            課前散步與排泄</p>
+                    </label>
+                </div>
+            </section>
         </main>
 
         <div class="fixed bottom-28 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 z-40">
-            <a href="https://line.me/R/oaMessage/@370vbzff/?🐾 阿丹老師您好！我已經看完課前準備清單了，想跟老師諮詢預約上課時間！" class="w-full bg-primary text-background-dark font-black py-5 rounded-2xl shadow-2xl flex items-center justify-center hover:opacity-90 active:scale-95 transition-all text-lg italic tracking-widest uppercase">
-                I'M READY / 我準備好了！
+            <a href="https://line.me/ti/p/@370vbzff"
+                class="w-full bg-primary text-background-dark font-black py-5 rounded-2xl shadow-2xl flex items-center justify-center hover:opacity-90 active:scale-95 transition-all text-lg italic tracking-widest uppercase">
+                加入官方帳號
             </a>
         </div>
 
-        <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+        <nav
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
             <div class="flex justify-around items-end">
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="index.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="index.html">
                     <span class="material-symbols-outlined">home</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">首頁</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="curriculum.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="curriculum.html">
                     <span class="material-symbols-outlined">school</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">課程規劃</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="blog.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="blog.html">
                     <span class="material-symbols-outlined">article</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
                 </a>
                 <a class="flex flex-col items-center gap-1.5 text-primary" href="preparation.html">
-                    <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">assignment_turned_in</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">課前準備</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="booking.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="booking.html">
                     <span class="material-symbols-outlined">calendar_today</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">預約課程</p>
                 </a>
@@ -72,4 +135,5 @@
         </nav>
     </div>
 </body>
+
 </html>

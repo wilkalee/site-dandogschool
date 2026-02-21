@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html class="dark" lang="zh-TW">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>阿丹的狗學堂 - 首頁</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
     <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -19,62 +22,175 @@
         }
     </script>
     <style>
-        body { font-family: 'Lexend', sans-serif; background-color: #191a1c; -webkit-tap-highlight-color: transparent; }
-        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #191a1c;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
     </style>
 </head>
-<body class="bg-background-dark text-[#fdfefe] font-display">
-    <div class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
-        <header class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
-            <div class="text-primary flex size-10 items-center justify-center"><span class="material-symbols-outlined text-3xl">pets</span></div>
+
+<body class="bg-background-dark text-[#fdfefe] font-display min-h-screen">
+    <div
+        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        <header
+            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
+            <div class="text-primary flex size-10 items-center justify-center"><span
+                    class="material-symbols-outlined text-3xl">pets</span></div>
             <h1 class="text-[#fdfefe] font-bold tracking-tight text-lg">阿丹的狗學堂</h1>
-            <button onclick="window.location.href='admin.html'" class="size-10 rounded-full hover:bg-primary/10 flex items-center justify-center transition-colors">
+            <button onclick="window.location.href='admin.html'"
+                class="size-10 rounded-full hover:bg-primary/10 flex items-center justify-center transition-colors">
                 <span class="material-symbols-outlined text-primary">admin_panel_settings</span>
             </button>
         </header>
 
         <main class="flex-1 pb-32">
+            <!-- Hero Section -->
             <section class="p-4">
-                <div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-2xl min-h-[400px] shadow-lg" style='background-image: linear-gradient(to top, rgba(25, 26, 28, 0.9) 0%, rgba(25, 26, 28, 0.2) 50%, rgba(25, 26, 28, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXHinxfyS8yfw8SppB_rCnscNslabvCVWHp7LjStEWLg6ScqvBQcJr6XFDHXHdavgF8UORcmw2rhU0zkKsFFSsnQaz-kYUU5E7EUZmnytrcHiskGHgxiqaOYquIPGQPBh9rTX2mUpDIHyxnj4SF6b0wiv8ZQWakwTIRCJsd5AL2EnWX8fMuI4KLUCkZYXLQEVeHkVFC84DMGRgm0cpAl1p3EKW0_3yA7FuE66Qtn81odBgsEvw2ZzjVLO9Y6VWI5LZnLzoOc1HXuoQ");'>
+                <div class="relative bg-cover bg-center flex flex-col justify-end overflow-hidden rounded-2xl min-h-[400px] shadow-lg"
+                    style='background-image: linear-gradient(to top, rgba(25, 26, 28, 0.9) 0%, rgba(25, 26, 28, 0.2) 50%, rgba(25, 26, 28, 0) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuBXHinxfyS8yfw8SppB_rCnscNslabvCVWHp7LjStEWLg6ScqvBQcJr6XFDHXHdavgF8UORcmw2rhU0zkKsFFSsnQaz-kYUU5E7EUZmnytrcHiskGHgxiqaOYquIPGQPBh9rTX2mUpDIHyxnj4SF6b0wiv8ZQWakwTIRCJsd5AL2EnWX8fMuI4KLUCkZYXLQEVeHkVFC84DMGRgm0cpAl1p3EKW0_3yA7FuE66Qtn81odBgsEvw2ZzjVLO9Y6VWI5LZnLzoOc1HXuoQ");'>
                     <div class="p-6">
-                        <span class="bg-primary text-background-dark text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit">Expert Dog Trainer</span>
-                        <h2 class="text-white text-3xl font-black mt-2 leading-tight">耐心是訓練的唯一源頭</h2>
-                        <p class="text-white/80 text-sm mt-2">透過正向強化建立終身的情感連結。</p>
+                        <span
+                            class="bg-primary text-background-dark text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-full w-fit">Expert
+                            Dog Trainer</span>
+                        <h2 class="text-white text-3xl font-black mt-2 leading-tight">Professional training for happy
+                            dogs and owners</h2>
+                        <p class="text-white/80 text-sm mt-2">Building lifelong bonds through positive reinforcement and
+                            professional guidance.</p>
                     </div>
                 </div>
             </section>
+
+            <!-- Coach Introduction -->
             <section class="px-4 py-6">
-                <div class="bg-card-dark p-6 rounded-2xl border border-primary/10">
-                    <h3 class="text-xl font-bold text-primary mb-4 italic">關於阿丹老師</h3>
-                    <p class="text-white/70 text-base leading-relaxed mb-6">我們相信理解與尊重是改變行為的關鍵。</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-bold">#正向強化</span>
-                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-xs font-bold">#行為糾正</span>
+                <div
+                    class="bg-card-dark p-6 rounded-3xl border border-primary/10 shadow-xl flex flex-col sm:flex-row gap-6">
+                    <div class="w-full sm:w-1/3 aspect-square rounded-2xl bg-center bg-cover border-4 border-primary/10 shrink-0"
+                        data-alt="Friendly portrait of dog trainer Coach DanDan smiling"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3IhaxIu3lPp7se4Hc5pGZdxfjwIan8gASy7S6gyxNYpDhoJZcUcO2pmJl118lYWHWTx0LWj9qtV1rbKsxtxEFtsQC9zoVTtPVJSpIykNMX4TUXA1hwh3Hcz6Q_KMKGGaaFZbZdmbXNqSdZhlUXv3RxuGMCbq9a3AHzukY4pACmvjxl9N_qTtAa9bxdD4SDuOspgT7VEqVKXLcbVOEAWS0h0Plyzvjr7JLsKXFJ1Cp9AOd90KjqHvyk0dJgw6YHXgB5yZ3KthjFXIB");'>
                     </div>
+                    <div class="flex flex-col justify-center gap-4">
+                        <div>
+                            <h3 class="text-xl font-bold text-[#fdfefe] mb-1">Meet Coach DanDan</h3>
+                            <h4 class="text-primary text-sm font-bold uppercase tracking-wider">Professional &amp;
+                                Gentle</h4>
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed">DanDan focuses on positive reinforcement to
+                            build a lifelong bond between you and your pet. With over 10 years of experience, our
+                            philosophy is rooted in understanding canine psychology and mutual respect.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-[10px] font-bold uppercase">#PositiveReinforcement</span>
+                            <span
+                                class="bg-primary/10 text-primary px-3 py-1 rounded-lg text-[10px] font-bold uppercase">#BehaviorCorrection</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Consultation QR Section -->
+            <section class="px-4 py-8">
+                <div class="text-center space-y-2 mb-6">
+                    <h3 class="text-xl font-bold text-[#fdfefe]">Start Your Journey Today</h3>
+                    <p class="text-white/60 text-sm">Scan or click to connect with us for a free consultation</p>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <!-- Facebook QR -->
+                    <div
+                        class="bg-card-dark p-4 rounded-3xl shadow-sm border border-primary/10 flex flex-col items-center gap-3">
+                        <div class="size-10 bg-blue-600 rounded-full flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-[20px]">social_leaderboard</span>
+                        </div>
+                        <h4 class="font-bold text-sm text-[#fdfefe]">Facebook</h4>
+                        <div class="size-24 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 group cursor-pointer hover:border-blue-500 transition-colors"
+                            onclick="window.open('https://facebook.com', '_blank')">
+                            <span
+                                class="material-symbols-outlined text-4xl text-blue-500 group-hover:scale-110 transition-transform">qr_code_2</span>
+                        </div>
+                    </div>
+                    <!-- LINE QR -->
+                    <div
+                        class="bg-card-dark p-4 rounded-3xl shadow-sm border border-primary/10 flex flex-col items-center gap-3">
+                        <div class="size-10 bg-[#06C755] rounded-full flex items-center justify-center text-white">
+                            <span class="material-symbols-outlined text-[20px]">chat</span>
+                        </div>
+                        <h4 class="font-bold text-sm text-[#fdfefe]">LINE Official</h4>
+                        <div class="size-24 rounded-lg bg-white/5 flex items-center justify-center border border-white/10 group cursor-pointer hover:border-[#06C755] transition-colors"
+                            onclick="window.location.href='booking.html'">
+                            <span
+                                class="material-symbols-outlined text-4xl text-[#06C755] group-hover:scale-110 transition-transform">qr_code_scanner</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Preview -->
+            <section class="px-4 py-6">
+                <h3 class="text-lg font-bold mb-4 flex items-center gap-2 text-[#fdfefe]">
+                    <span class="material-symbols-outlined text-primary">school</span> Training Programs
+                </h3>
+                <div class="grid grid-cols-2 gap-4">
+                    <a class="group relative aspect-square sm:aspect-[4/5] rounded-2xl overflow-hidden bg-background-dark shadow-md border border-primary/10"
+                        href="curriculum.html">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Small puppy in a training session"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD9ZD4Ykm3JlVBqeOXyl369EAo0mhF1U0w-ECnv_NOKwDLDECXQWruBbb00CuJQG5mgyMUWVPOxhLWurSn-z9B1w72jnA3ENImuhrQrW0jsomQlfM_C20Ce-D-R5jFX3i6EZrXdroGZsr5FrGKjVeK8m-91m9wja1Zo0G8CqaCCuUHZLDHiD-5yzGbqn2a6KjHG6kiujf2TAm9bH1AgAVm8cbllLNqSMhkig0k7X0osZTDyiDAtU6HVgxsjkD3bJsdEG33OWI633Av7");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-primary text-[10px] font-bold tracking-widest uppercase mb-1 drop-shadow">
+                                Kindergarten</p>
+                            <p class="text-white font-bold text-sm sm:text-lg">Puppy Kinder</p>
+                            <p class="text-white/60 text-[10px]">For pups 2-6 months</p>
+                        </div>
+                    </a>
+                    <a class="group relative aspect-square sm:aspect-[4/5] rounded-2xl overflow-hidden bg-background-dark shadow-md border border-primary/10"
+                        href="curriculum.html">
+                        <div class="absolute inset-0 bg-cover bg-center opacity-70 group-hover:scale-110 transition-transform duration-500"
+                            data-alt="Adult dog performing obedience tricks"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAifbCUynDL2y6PZn4K7MewPQ9YfnQ9V2A-3-T3-rIEn_b9wu_XQDZF7yYURzU-Cc9A_5M4DRfk4K-dglQC4dgao-zyhSpMp5eCV-jNs8EsTHR7_C-vwx0UghKoGss-GXJHmOs3IH68k9UPpC3b1YsmM3jRJAVlMpr0rCZkvr8SWMVTQG_m2ae-m6G_iHm51uUn4chCPTOYmNaj6hA7hOhEoVARtFAEBpsUAy0w1dZFjru-2al2w_Hau3WYi5z956PmbjJb9NjxPdk1");'>
+                        </div>
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <p class="text-primary text-[10px] font-bold tracking-widest uppercase mb-1 drop-shadow">
+                                Obedience</p>
+                            <p class="text-white font-bold text-sm sm:text-lg">Adult Basics</p>
+                            <p class="text-white/60 text-[10px]">Essential life skills</p>
+                        </div>
+                    </a>
                 </div>
             </section>
         </main>
 
         <!-- 導覽列 -->
-        <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+        <nav
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
             <div class="flex justify-around items-end">
                 <a class="flex flex-col items-center gap-1.5 text-primary" href="index.html">
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">首頁</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="curriculum.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="curriculum.html">
                     <span class="material-symbols-outlined">school</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">課程規劃</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="blog.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="blog.html">
                     <span class="material-symbols-outlined">article</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="preparation.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="preparation.html">
                     <span class="material-symbols-outlined">assignment_turned_in</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">課前準備</p>
                 </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all" href="booking.html">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="booking.html">
                     <span class="material-symbols-outlined">calendar_today</span>
                     <p class="text-[10px] font-bold uppercase tracking-widest">預約課程</p>
                 </a>
@@ -82,4 +198,5 @@
         </nav>
     </div>
 </body>
+
 </html>

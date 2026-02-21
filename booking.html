@@ -1,75 +1,166 @@
-import React from 'react';
+<!DOCTYPE html>
+<html class="dark" lang="zh-TW">
 
-// --- 輔助組件：課程卡片 ---
-const CourseCard = ({ title, price, tag, btnText, message }) => {
-  const lineId = "@370vbzff";
-  const encodedMsg = encodeURIComponent(message);
-  const lineUrl = `https://line.me/R/oaMessage/${lineId}/?${encodedMsg}`;
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>預約課程 - 阿丹的狗學堂</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: { "primary": "#c3a474", "background-dark": "#191a1c", "card-dark": "#222427" },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+            background-color: #191a1c;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-  return (
-    <div className="relative flex flex-col gap-4 rounded-3xl border-2 border-[#c3a474] bg-[#222427] p-7 shadow-xl transition-all hover:border-[#c3a474]/80 text-left">
-      {tag && (
-        <div className="absolute top-0 right-0 bg-[#c3a474] text-[#191a1c] text-[10px] font-black uppercase px-4 py-1.5 rounded-bl-xl italic">
-          {tag}
-        </div>
-      )}
-      <h3 className="text-white text-xl font-bold italic tracking-tighter">{title}</h3>
-      <div className="flex items-baseline gap-1">
-        <span className="text-[#c3a474] text-5xl font-black italic tracking-tighter">{price}</span>
-        <span className="text-white/60 font-bold text-sm italic">元</span>
-      </div>
-      <a href={lineUrl} target="_blank" rel="noopener noreferrer" className="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
-        {btnText}
-      </a>
-    </div>
-  );
-};
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
 
-export default function App() {
-  const courses = [
-    { title: "第一堂諮詢優惠價", price: "1,000", tag: "Offer", btnText: "立即聯繫預約", message: "🐾 阿丹老師您好！我想領取「第一堂諮詢優惠價」，想預約諮詢。" },
-    { title: "單堂訓練課程", price: "1,500", btnText: "馬上私訊預約", message: "🐾 阿丹老師您好！我想預約「單堂訓練課程」，想請問可預約時段。" },
-    { title: "10 週基礎教育課程", price: "12,000", tag: "Hot", btnText: "馬上預約報名", message: "🐾 阿丹老師您好！我對「10週基礎教育課程」有興趣。" },
-    { title: "到府教學 (一對一)", price: "2,500", btnText: "立即聯繫阿丹老師", message: "🐾 阿丹老師您好！我想諮詢「一對一到府教學」。" }
-  ];
-
-  // 底欄連結必須 100% 正確
-  const navItems = [
-    { icon: 'home', label: '首頁', link: 'index.html' },
-    { icon: 'school', label: '課程規劃', link: 'curriculum.html' },
-    { icon: 'article', label: '訓練專欄', link: 'blog.html' },
-    { icon: 'assignment_turned_in', label: '課前準備', link: 'preparation.html' },
-    { icon: 'calendar_today', label: '預約課程', link: 'booking.html', active: true }
-  ];
-
-  return (
-    <div className="bg-[#191a1c] text-[#fdfefe] font-display min-h-screen">
-      <div className="max-w-2xl mx-auto border-x border-[#c3a474]/10 min-h-screen flex flex-col relative shadow-2xl bg-[#191a1c]">
-        
-        <header className="sticky top-0 z-50 flex items-center bg-[#191a1c]/90 backdrop-blur-md border-b border-[#c3a474]/20 p-4 justify-between">
-          <button onClick={() => window.location.href='index.html'} className="size-10 rounded-full hover:bg-[#c3a474]/10 flex items-center justify-center transition-colors text-primary">
-            <span className="material-symbols-outlined">arrow_back</span>
-          </button>
-          <h1 className="text-lg font-bold tracking-tight italic uppercase tracking-widest text-[#c3a474]">預約課程</h1>
-          <div className="w-10"></div>
+<body class="bg-background-dark text-[#fdfefe] font-display min-h-screen">
+    <div
+        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        <header
+            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
+            <button onclick="window.location.href='index.html'"
+                class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <h1 class="text-[#c3a474] font-bold tracking-tight text-lg italic uppercase tracking-widest">預約課程</h1>
+            <div class="w-10"></div>
         </header>
 
-        <main className="flex-1 pb-40 px-4 space-y-10 mt-10 text-center">
-          <h2 className="text-3xl font-black italic uppercase tracking-tighter text-white">Join The Pack</h2>
-          <div className="grid gap-8">{courses.map((course, idx) => (<CourseCard key={idx} {...course} />))}</div>
+        <main class="flex-1 pb-40 px-4 space-y-10 mt-10 text-center">
+            <div class="text-center space-y-3">
+                <h2 class="text-3xl font-black italic uppercase tracking-tighter text-white leading-tight">Join The Pack
+                </h2>
+                <div class="flex flex-col items-center gap-1">
+                    <p class="text-[#c3a474] font-medium italic text-xs tracking-widest uppercase opacity-80">
+                        專業引導，開啟您的訓練之旅</p>
+                    <div class="h-0.5 w-12 bg-[#c3a474]/30 rounded-full mt-1"></div>
+                </div>
+                <p class="text-white/40 text-[10px] italic mt-4 max-w-[280px] mx-auto leading-relaxed">
+                    點選下方課程按鈕將直接進入 LINE 對話框<br />由阿丹老師親自為您安排上課時段與評估需求
+                </p>
+            </div>
+
+            <div class="grid gap-8">
+                <!-- Course 1 -->
+                <div
+                    class="relative flex flex-col gap-4 rounded-3xl border-2 border-[#c3a474] bg-[#222427] p-7 shadow-xl transition-all hover:border-[#c3a474]/80 text-left">
+                    <div
+                        class="absolute top-0 right-0 bg-[#c3a474] text-[#191a1c] text-[10px] font-black uppercase px-4 py-1.5 rounded-bl-xl italic">
+                        Offer</div>
+                    <h3 class="text-white text-xl font-bold italic tracking-tighter">第一堂諮詢優惠價</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-[#c3a474] text-5xl font-black italic tracking-tighter">1,000</span>
+                        <span class="text-white/60 font-bold text-sm italic">元</span>
+                    </div>
+                    <a href="https://line.me/ti/p/@370vbzff" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
+                        加入官方帳號
+                    </a>
+                </div>
+                <!-- Course 2 -->
+                <div
+                    class="relative flex flex-col gap-4 rounded-3xl border-2 border-[#c3a474] bg-[#222427] p-7 shadow-xl transition-all hover:border-[#c3a474]/80 text-left">
+                    <h3 class="text-white text-xl font-bold italic tracking-tighter">單堂訓練課程</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-[#c3a474] text-5xl font-black italic tracking-tighter">1,500</span>
+                        <span class="text-white/60 font-bold text-sm italic">元</span>
+                    </div>
+                    <a href="https://line.me/ti/p/@370vbzff" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
+                        加入官方帳號
+                    </a>
+                </div>
+                <!-- Course 3 -->
+                <div
+                    class="relative flex flex-col gap-4 rounded-3xl border-2 border-[#c3a474] bg-[#222427] p-7 shadow-xl transition-all hover:border-[#c3a474]/80 text-left">
+                    <div
+                        class="absolute top-0 right-0 bg-[#c3a474] text-[#191a1c] text-[10px] font-black uppercase px-4 py-1.5 rounded-bl-xl italic">
+                        Hot</div>
+                    <h3 class="text-white text-xl font-bold italic tracking-tighter">10 週基礎教育課程</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-[#c3a474] text-5xl font-black italic tracking-tighter">12,000</span>
+                        <span class="text-white/60 font-bold text-sm italic">元</span>
+                    </div>
+                    <a href="https://line.me/ti/p/@370vbzff" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
+                        加入官方帳號
+                    </a>
+                </div>
+                <!-- Course 4 -->
+                <div
+                    class="relative flex flex-col gap-4 rounded-3xl border-2 border-[#c3a474] bg-[#222427] p-7 shadow-xl transition-all hover:border-[#c3a474]/80 text-left">
+                    <h3 class="text-white text-xl font-bold italic tracking-tighter">到府教學 (一對一)</h3>
+                    <div class="flex items-baseline gap-1">
+                        <span class="text-[#c3a474] text-5xl font-black italic tracking-tighter">2,500</span>
+                        <span class="text-white/60 font-bold text-sm italic">元</span>
+                    </div>
+                    <!-- Encoding line break using %0A for the href since line break in source code will break the URL -->
+                    <a href="https://line.me/ti/p/@370vbzff" target="_blank" rel="noopener noreferrer"
+                        class="w-full bg-[#c3a474] text-[#191a1c] font-black py-4 rounded-2xl shadow-lg active:scale-95 transition-all text-center text-lg italic uppercase">
+                        加入官方帳號
+                    </a>
+                </div>
+            </div>
+
+            <!-- 聯絡資訊補充 -->
+            <div class="py-10 text-center space-y-4 opacity-50">
+                <span class="material-symbols-outlined text-[#c3a474] text-4xl">chat_bubble</span>
+                <p class="text-xs italic leading-loose">人工對話預約，讓訓練更有溫度<br />我們將在對話中為您提供完整的付款指引</p>
+            </div>
         </main>
 
-        <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-[#191a1c]/95 backdrop-blur-md border-t border-[#c3a474]/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
-          <div className="flex justify-around items-end">
-            {navItems.map((item, idx) => (
-              <a key={idx} href={item.link} className={`flex flex-col items-center gap-1 transition-all ${item.active ? 'text-[#c3a474]' : 'text-white/30 hover:text-[#c3a474]'}`}>
-                <span className="material-symbols-outlined" style={{ fontVariationSettings: item.active ? "'FILL' 1" : "'FILL' 0" }}>{item.icon}</span>
-                <p className="text-[10px] font-bold uppercase tracking-widest">{item.label}</p>
-              </a>
-            ))}
-          </div>
+        <nav
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+            <div class="flex justify-around items-end">
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="index.html">
+                    <span class="material-symbols-outlined">home</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">首頁</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="curriculum.html">
+                    <span class="material-symbols-outlined">school</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">課程規劃</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="blog.html">
+                    <span class="material-symbols-outlined">article</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="preparation.html">
+                    <span class="material-symbols-outlined">assignment_turned_in</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">課前準備</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-primary" href="booking.html">
+                    <span class="material-symbols-outlined"
+                        style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">預約課程</p>
+                </a>
+            </div>
         </nav>
-      </div>
     </div>
-  );
-}
+</body>
+
+</html>
