@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html class="dark" lang="zh-TW">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>阿丹的狗學堂 - 後台管理</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c3a474",
+                        "background-dark": "#191a1c",
+                        "surface-dark": "#222427",
+                    },
+                    fontFamily: { "display": ["Lexend", "sans-serif"] },
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Lexend', sans-serif; background-color: #191a1c; -webkit-tap-highlight-color: transparent; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .active-icon { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-dark text-slate-100 min-h-screen pb-32">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-background-dark/80 backdrop-blur-md border-b border-primary/20 px-4 py-4">
+        <div class="flex items-center justify-between max-w-5xl mx-auto">
+            <div class="flex items-center gap-3">
+                <div class="size-10 rounded-full bg-primary/20 flex items-center justify-center border border-primary/30">
+                    <span class="material-symbols-outlined text-primary">admin_panel_settings</span>
+                </div>
+                <div>
+                    <h1 class="text-lg font-bold tracking-tight text-white leading-none">後台管理</h1>
+                    <p class="text-[10px] text-primary font-bold mt-1 uppercase tracking-widest opacity-80">DanDan School CMS</p>
+                </div>
+            </div>
+            <div class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-black text-sm">丹</div>
+        </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 pt-6 space-y-10">
+        <!-- 數據區 -->
+        <section>
+            <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/60 mb-4 px-1 italic">Performance / 數據分析</h2>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-surface-dark p-6 rounded-3xl border border-primary/10 shadow-lg relative overflow-hidden group">
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-tighter mb-1">本月預約</p>
+                    <span class="text-3xl font-black text-white leading-none tracking-tighter">128</span>
+                    <div class="absolute -right-2 -bottom-2 opacity-5 scale-150">
+                        <span class="material-symbols-outlined text-8xl text-primary font-black">event_note</span>
+                    </div>
+                </div>
+                <div class="bg-surface-dark p-6 rounded-3xl border border-primary/10 shadow-lg relative overflow-hidden group">
+                    <p class="text-slate-400 text-xs font-bold uppercase tracking-tighter mb-1">文章點擊</p>
+                    <span class="text-3xl font-black text-white leading-none tracking-tighter">1.2K</span>
+                    <div class="absolute -right-2 -bottom-2 opacity-5 scale-150">
+                        <span class="material-symbols-outlined text-8xl text-primary font-black">trending_up</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 頁面管理 -->
+        <section>
+            <h2 class="text-[10px] font-black uppercase tracking-[0.2em] text-primary/60 mb-4 px-1 italic">Management / 頁面管理</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Home Card -->
+                <div class="bg-surface-dark p-6 rounded-[32px] border border-primary/10 shadow-xl group cursor-pointer hover:border-primary/40 transition-all" onclick="window.location.href='index.html'">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">home</span>
+                        </div>
+                        <span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded">Active</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white italic text-lg">首頁編輯 / Home</h3>
+                        <p class="text-xs text-white/30 mt-1 italic uppercase tracking-tighter font-bold">Edit Page Content →</p>
+                    </div>
+                </div>
+
+                <!-- Curriculum Card -->
+                <div class="bg-surface-dark p-6 rounded-[32px] border border-primary/10 shadow-xl group cursor-pointer hover:border-primary/40 transition-all" onclick="window.location.href='curriculum.html'">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="size-12 rounded-2xl bg-primary/10 flex items-center justify-center text-primary">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded">Active</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white italic text-lg">課程規劃 / Curriculum</h3>
+                        <p class="text-xs text-white/30 mt-1 italic uppercase tracking-tighter font-bold">Edit Roadmap →</p>
+                    </div>
+                </div>
+
+                <!-- Booking Card -->
+                <div class="bg-surface-dark p-6 rounded-[32px] border-2 border-primary shadow-2xl group cursor-pointer hover:border-primary transition-all" onclick="window.location.href='booking.html'">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="size-12 rounded-2xl bg-primary flex items-center justify-center text-background-dark">
+                            <span class="material-symbols-outlined font-black">payments</span>
+                        </div>
+                        <span class="px-2 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded">Active</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-white italic text-lg tracking-tighter">報名表單與價目 / Booking</h3>
+                        <p class="text-xs text-primary mt-1 italic uppercase tracking-tighter font-black">Configure Steps →</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- 底部導覽 -->
+    <nav class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-lg bg-background-dark/95 backdrop-blur-lg border-t border-primary/20 px-8 pb-8 pt-4 z-[100] shadow-2xl">
+        <div class="flex justify-between items-end">
+            <a class="flex flex-col items-center gap-1 group text-primary" href="#">
+                <span class="material-symbols-outlined active-icon">dashboard</span>
+                <p class="text-[8px] font-black uppercase tracking-[0.2em]">Dashboard</p>
+            </a>
+            <a class="flex flex-col items-center gap-1 group text-white/30 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined">layers</span>
+                <p class="text-[8px] font-black uppercase tracking-[0.2em]">Pages</p>
+            </a>
+            <a class="flex flex-col items-center gap-1 group text-white/30 hover:text-primary transition-colors" href="#">
+                <span class="material-symbols-outlined">settings</span>
+                <p class="text-[8px] font-black uppercase tracking-[0.2em]">Settings</p>
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

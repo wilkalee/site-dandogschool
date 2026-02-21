@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DanDan's Dog School - 訓練實錄</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#c3a474",
+                        "background-dark": "#191a1c",
+                    },
+                    fontFamily: {
+                        "display": ["Lexend", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>body { min-height: max(884px, 100dvh); background-color: #191a1c; }</style>
+</head>
+<body class="dark bg-[#191a1c] text-[#fdfefe] min-h-screen flex flex-col">
+<!-- Header Section -->
+<header class="sticky top-0 z-50 bg-[#191a1c]/90 backdrop-blur-md border-b border-primary/20">
+<div class="flex items-center p-4 justify-between max-w-2xl mx-auto w-full">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-[#fdfefe]">訓練專欄</h1>
+</div>
+<div class="flex gap-2">
+<button class="flex items-center justify-center size-10 rounded-full hover:bg-primary/10 transition-colors">
+<span class="material-symbols-outlined text-primary">search</span>
+</button>
+</div>
+</div>
+<!-- Category Tabs -->
+<div class="flex border-b border-primary/5 px-4 overflow-x-auto no-scrollbar gap-6 max-w-2xl mx-auto w-full">
+<a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-2 whitespace-nowrap" href="#">
+<span class="text-sm font-bold tracking-wide">全部影片</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 pb-3 pt-2 whitespace-nowrap text-white/60" href="#">
+<span class="text-sm font-medium tracking-wide">日常護理</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 pb-3 pt-2 whitespace-nowrap text-white/60" href="#">
+<span class="text-sm font-medium tracking-wide">行為糾正</span>
+</a>
+<a class="flex flex-col items-center justify-center border-b-2 border-transparent text-gray-500 pb-3 pt-2 whitespace-nowrap text-white/60" href="#">
+<span class="text-sm font-medium tracking-wide">幼犬訓練</span>
+</a>
+</div>
+</header>
+<main class="flex-1 max-w-2xl mx-auto w-full px-4 py-6 space-y-8">
+<!-- Featured Video -->
+<section class="space-y-6">
+<div class="flex items-center justify-between">
+<h2 class="text-lg font-bold flex items-center gap-2 text-[#fdfefe]"><span class="material-symbols-outlined">star</span> 精選專欄</h2>
+<span class="text-xs font-semibold text-primary uppercase tracking-widest bg-primary/10 px-2 py-1 rounded">New</span>
+</div>
+<div class="space-y-4">
+<h1 class="text-2xl font-bold leading-tight text-[#fdfefe]">刷牙減敏：讓狗狗從抗拒到期待</h1>
+<div class="flex items-center gap-4 text-sm text-white/60">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">calendar_today</span>
+<span>2023.11.20</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span>DanDan 教練</span>
+</div>
+</div>
+<p class="text-white/80 leading-relaxed italic border-l-4 border-primary/40 pl-4">「穿胸背帶就像是在打仗。」這是許多觸碰敏感狗狗主人的心聲。本篇將透過噗醬的案例，探討如何利用正向強化與漸進減敏改善嚴重的情緒反應。</p>
+</div>
+</section><section class="p-6 rounded-xl bg-zinc-900 border border-primary/10 space-y-4">
+<h3 class="text-lg font-bold text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">paws</span>
+        個案研究：噗醬 (Pujyang)
+    </h3>
+<div class="grid grid-cols-2 gap-4 text-sm">
+<div class="space-y-1">
+<p class="text-white/40">年齡 / 品種</p>
+<p class="font-medium">3歲 / 柴犬</p>
+</div>
+<div class="space-y-1">
+<p class="text-white/40">主要問題</p>
+<p class="font-medium text-red-400">嚴重觸碰敏感 (穿戴胸背時咬人)</p>
+</div>
+</div>
+</section><section class="space-y-4">
+<h3 class="text-lg font-bold text-[#fdfefe]">行為評估與記錄</h3>
+<p class="text-white/80 text-sm leading-relaxed">
+        在來到學校之前，噗醬對於任何靠近脖子或背部的物品都抱持極高的警覺。主人曾多次在嘗試穿戴胸背帶時被咬傷，甚至需要送醫縫合。下圖為訓練前的一次意外記錄（內容可能引起不適）。
+    </p>
+<div class="relative aspect-video rounded-xl overflow-hidden border border-white/10 group">
+<img class="w-full h-full object-cover blur-3xl scale-110 grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxRnvQBdYi4-GyQhkvshjNnzM6VgoDOl7-sqzG0fK3AdoIZBo92tRkxHB5JbhXlpZ3p63JCEZ-fbJaUZF3HuHnJfeidmkvzfOrpe4Gv7b9I7hZmtVVbQSeJhV54TlhuRX_CIl90E3OFfKT153wXaOqYd0Dr-kf11JeH9tPHT75UpUaQwzAQe_8rtVe5iwAta5MXWeHxFSJq0qakuGbtBMXB3v0qEjltFbRhVeKa0HsG4c9LQNbnZEVaOt7m9jOXNaxCtG8NmxotFz5"/>
+<div class="absolute inset-0 flex flex-col items-center justify-center bg-black/60 backdrop-blur-sm cursor-pointer group-hover:bg-black/40 transition-all">
+<span class="material-symbols-outlined text-4xl text-white mb-2">visibility_off</span>
+<p class="text-white font-bold">敏感內容</p>
+<p class="text-white/60 text-xs">點擊以顯示照片</p>
+</div>
+</div>
+</section><section class="space-y-4">
+<h3 class="text-lg font-bold text-[#fdfefe]">減敏訓練示範影片</h3>
+<div class="aspect-video bg-zinc-900 rounded-xl border-2 border-dashed border-primary/30 flex flex-col items-center justify-center gap-4 group">
+<div class="size-16 rounded-full bg-zinc-800 flex items-center justify-center text-primary/40 group-hover:bg-primary/10 group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-4xl">play_circle</span>
+</div>
+<div class="text-center">
+<p class="text-sm font-bold text-white/40">影片製作中</p>
+<p class="text-[10px] text-white/20 uppercase tracking-widest">Coming Soon - YouTube Style Preview</p>
+</div>
+</div>
+</section>
+<!-- Video Grid List -->
+<section class="space-y-4">
+<h2 class="text-lg font-bold text-[#fdfefe]">更多訓練專欄</h2>
+<div class="grid grid-cols-1 gap-6">
+<!-- Video Item 1: Brushing Teeth -->
+<div class="flex flex-col sm:flex-row gap-4 group">
+<div class="relative aspect-video sm:w-48 shrink-0 bg-zinc-200 rounded-lg overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Small dog having its teeth brushed by owner" src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjl0K_-F1oPaDFvG-j4YXF0TKvX5JlagJ6viT3ctNeOpeGDIW1hlo4GpLlgbe45dmBVoe9tySAJZgBRad111H15EuwnT-ydKRsSfowoOagFJ9X68sie5pzyyL_HziFE2YVukMPReNFl3a-nazoFmBXa5GlmKQA4_A1ZMSCM1wCAb7uzGRdhe-4FGygaPAwRIpPtiAxnwKymaU4KbcQqoPMu0aMcxNJqhhMyobvIHkNT6TMFsnT39drgcVYkSumttLig3OUhRSObHP"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded">05:22</div>
+</div>
+<div class="flex flex-col justify-center space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary px-1.5 py-0.5 bg-primary/10 rounded uppercase tracking-wider">日常護理</span>
+<span class="text-[10px] text-gray-400 text-white/60">2天前</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-[#fdfefe]">新手家長必看：居家刷牙三步驟</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 text-white/60">透過正向回饋，將刷牙變成每天最期待的互動時間。</p>
+</div>
+</div>
+<!-- Video Item 2: Leash Pulling -->
+<div class="flex flex-col sm:flex-row gap-4 group">
+<div class="relative aspect-video sm:w-48 shrink-0 bg-zinc-200 rounded-lg overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Owner holding a leash with a dog walking by side" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsx1qy8jZRTbpgdWGm2Qt2D51FtodIaTIANxbp7EWkP3KnkrQx10uA4AQZYJRKHJRrR8pRjLs_LgbwJprvqBK4b4aAdhbrvaJw2zBi0x9IDEpYQWH9g13tnLaf5to9Qrzog4Xol3vkfapiRo7k-srqWheljBLoeQaVuY8JKIFg17wir4sCuEnYtfRp0ip1Xn_QmgZmTbe37n3Po_RQDRvHOBgdyEHC2XtAy73U--li8y3UUdfUm4eUotwdg4u1jH347fD0NPSyv_Z"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded">08:15</div>
+</div>
+<div class="flex flex-col justify-center space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary px-1.5 py-0.5 bg-primary/10 rounded uppercase tracking-wider">行為糾正</span>
+<span class="text-[10px] text-gray-400 text-white/60">1週前</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-[#fdfefe]">散步不拉扯：鬆繩隨行基礎練習</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 text-white/60">解決狗狗外出過度興奮、不斷拉扯牽繩的行為改善技巧。</p>
+</div>
+</div>
+<!-- Video Item 3: Nail Clipping -->
+<div class="flex flex-col sm:flex-row gap-4 group">
+<div class="relative aspect-video sm:w-48 shrink-0 bg-zinc-200 rounded-lg overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Groomer carefully clipping a dog's nails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxRnvQBdYi4-GyQhkvshjNnzM6VgoDOl7-sqzG0fK3AdoIZBo92tRkxHB5JbhXlpZ3p63JCEZ-fbJaUZF3HuHnJfeidmkvzfOrpe4Gv7b9I7hZmtVVbQSeJhV54TlhuRX_CIl90E3OFfKT153wXaOqYd0Dr-kf11JeH9tPHT75UpUaQwzAQe_8rtVe5iwAta5MXWeHxFSJq0qakuGbtBMXB3v0qEjltFbRhVeKa0HsG4c9LQNbnZEVaOt7m9jOXNaxCtG8NmxotFz5"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded">04:40</div>
+</div>
+<div class="flex flex-col justify-center space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary px-1.5 py-0.5 bg-primary/10 rounded uppercase tracking-wider">日常護理</span>
+<span class="text-[10px] text-gray-400 text-white/60">2週前</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-[#fdfefe]">剪指甲不再像打仗：觸碰減敏指南</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 text-white/60">針對對剪指甲極度抗拒的狗狗，進行漸進式的減敏引導。</p>
+</div>
+</div>
+<!-- Video Item 4: Recall Training -->
+<div class="flex flex-col sm:flex-row gap-4 group">
+<div class="relative aspect-video sm:w-48 shrink-0 bg-zinc-200 rounded-lg overflow-hidden border border-primary/5">
+<img class="w-full h-full object-cover" data-alt="Dog running towards the camera outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7O86Wk1LSVpw2cji3S5IiE-mokPFLfmvZmeIHQsvV83H3SO2B0OIGR0QVEnQPY9XqgR3JyP1lPScl3uJARVEvINiGnUiVcSXXs0XfTelEVGGMv09oBIIPpdPEzyibtGH1jFZnN2NJFGyhwwvNfBFg9nPTMlttdwO31fDXW-lE6Amhmhn71cRI86Rxwi8-kt8FyUgjmcCJhEe3tkswKFWHyac-Wh1p3p5Qiz5N2DX2dmaSA1rD8jkoPTWdiKSY73SiqibJ9DhmmLfF"/>
+<div class="absolute inset-0 bg-black/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-white text-3xl">play_circle</span>
+</div>
+<div class="absolute bottom-1 right-1 bg-black/60 text-white text-[10px] px-1.5 py-0.5 rounded">06:55</div>
+</div>
+<div class="flex flex-col justify-center space-y-1">
+<div class="flex items-center gap-2">
+<span class="text-[10px] font-bold text-primary px-1.5 py-0.5 bg-primary/10 rounded uppercase tracking-wider">幼犬訓練</span>
+<span class="text-[10px] text-gray-400 text-white/60">3週前</span>
+</div>
+<h3 class="font-bold text-base leading-tight text-[#fdfefe]">召回訓練：如何讓狗狗在公園也聽話</h3>
+<p class="text-xs text-gray-500 dark:text-gray-400 text-white/60">建立強大的連結，讓狗狗在任何環境下都能一喚即回。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Load More Button -->
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 right-0 bg-[#191a1c] border-t border-primary/20 px-4 pb-safe pt-2 z-50">
+<div class="flex justify-around items-end max-w-2xl mx-auto">
+<a class="flex flex-col items-center gap-1 py-1 text-gray-400 text-white/60" href="#">
+<span class="material-symbols-outlined">home</span>
+<p class="text-[10px] font-medium">首頁</p>
+</a>
+<a class="flex flex-col items-center gap-1 py-1 text-primary" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1">article</span>
+<p class="text-[10px] font-bold">訓練專欄</p>
+</a>
+<a class="flex flex-col items-center gap-1 py-1 text-gray-400 text-white/60" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<p class="text-[10px] font-medium">預約課程</p>
+</a>
+<a class="flex flex-col items-center gap-1 py-1 text-gray-400 text-white/60" href="#">
+<span class="material-symbols-outlined">person</span>
+<p class="text-[10px] font-medium">個人中心</p>
+</a>
+</div>
+</nav>
+<!-- Support Floating Button (Optional) -->
+<button class="fixed bottom-24 right-6 size-14 bg-primary text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform z-40">
+<span class="material-symbols-outlined text-2xl">chat</span>
+</button>
+</body></html>
