@@ -36,6 +36,17 @@
             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
     </style>
+    <script>
+        // Check if user is logged in
+        if (!sessionStorage.getItem('isAdminLoggedIn')) {
+            window.location.href = 'login.html';
+        }
+
+        function handleLogout() {
+            sessionStorage.removeItem('isAdminLoggedIn');
+            window.location.href = 'index.html';
+        }
+    </script>
 </head>
 
 <body class="bg-background-dark text-slate-100 min-h-screen pb-32">
@@ -52,9 +63,10 @@
                         School CMS</p>
                 </div>
             </div>
-            <div
-                class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-black text-sm">
-                丹</div>
+            <button onclick="handleLogout()" title="登出"
+                class="size-10 rounded-full bg-primary flex items-center justify-center text-background-dark font-black text-sm hover:scale-105 transition-transform">
+                登出
+            </button>
         </div>
     </header>
 
