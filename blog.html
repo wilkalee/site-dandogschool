@@ -58,24 +58,24 @@
 
         <!-- Category Tabs -->
         <div class="flex border-b border-primary/10 px-4 overflow-x-auto no-scrollbar gap-6" id="category-tabs">
-            <a href="#" data-tab="全部文章"
-                class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap">
+            <a href="javascript:void(0)" onclick="filterCategory('全部文章')" data-tab="全部文章"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-bold tracking-wide">全部文章</span>
             </a>
-            <a href="#" data-tab="最新消息"
-                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+            <a href="javascript:void(0)" onclick="filterCategory('最新消息')" data-tab="最新消息"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">最新消息</span>
             </a>
-            <a href="#" data-tab="行為訓練"
-                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+            <a href="javascript:void(0)" onclick="filterCategory('行為訓練')" data-tab="行為訓練"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">行為訓練</span>
             </a>
-            <a href="#" data-tab="日常護理"
-                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+            <a href="javascript:void(0)" onclick="filterCategory('日常護理')" data-tab="日常護理"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">日常護理</span>
             </a>
-            <a href="#" data-tab="其他知識"
-                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+            <a href="javascript:void(0)" onclick="filterCategory('其他知識')" data-tab="其他知識"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">其他知識</span>
             </a>
         </div>
@@ -83,7 +83,7 @@
         <main class="flex-1 pb-32 p-4 space-y-8">
             <!-- Article: 自己的狗狗自己教 -->
             <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
-                data-categories="行為訓練 最新消息">
+                data-categories="行為訓練">
                 <div class="flex items-center justify-between">
                     <span
                         class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-widest border border-primary/20">行為訓練</span>
@@ -96,9 +96,8 @@
                     <h1 class="text-2xl font-bold leading-tight text-[#fdfefe] mb-4">自己的狗狗自己教</h1>
 
                     <div
-                        class="w-full aspect-[4/3] sm:aspect-video rounded-2xl overflow-hidden mb-5 border border-white/5 bg-background-dark flex items-center justify-center relative">
-                        <img class="w-full h-full object-cover relative z-10" src="./dogtraining.jpg" alt="自己的狗狗自己教"
-                            onerror="this.onerror=null; this.src='./dandan.jpg';" />
+                        class="w-full aspect-[4/3] sm:aspect-video rounded-2xl overflow-hidden mb-5 border border-white/5">
+                        <img class="w-full h-full object-cover" src="dogtraining.jpg" alt="自己的狗狗自己教" />
                     </div>
 
                     <div class="space-y-4 text-white/80 text-sm leading-relaxed">
@@ -232,38 +231,43 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const tabs = document.querySelectorAll('#category-tabs a');
+        function filterCategory(selectedCategory) {
             const items = document.querySelectorAll('.blog-item');
+            const tabs = document.querySelectorAll('.category-tab');
 
+            // 1. Update Tabs Styling
             tabs.forEach(tab => {
-                tab.addEventListener('click', (e) => {
-                    e.preventDefault();
-
-                    // Reset tab styles
-                    tabs.forEach(t => {
-                        t.className = "flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap";
-                        t.querySelector('span').className = "text-sm font-medium tracking-wide";
-                    });
-
-                    // Active tab style
-                    tab.className = "flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap";
+                const tabCategory = tab.getAttribute('data-tab');
+                if (tabCategory === selectedCategory) {
+                    tab.className = "category-tab flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap";
                     tab.querySelector('span').className = "text-sm font-bold tracking-wide";
-
-                    const selectedCategory = tab.getAttribute('data-tab');
-
-                    // Filter posts
-                    items.forEach(item => {
-                        const categories = item.getAttribute('data-categories') || '';
-                        if (selectedCategory === '全部文章' || categories.includes(selectedCategory)) {
-                            item.style.display = 'flex'; // Use flex for videos
-                            if (item.tagName === 'ARTICLE') item.style.display = 'block'; // Block for articles
-                        } else {
-                            item.style.display = 'none';
-                        }
-                    });
-                });
+                } else {
+                    tab.className = "category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap";
+                    tab.querySelector('span').className = "text-sm font-medium tracking-wide";
+                }
             });
+
+            // 2. Filter Items
+            items.forEach(item => {
+                const itemCategories = item.getAttribute('data-categories') || '';
+                const isMatch = selectedCategory === '全部文章' || itemCategories.includes(selectedCategory);
+
+                if (isMatch) {
+                    // Check if it's a video item (uses flex) or article (uses block)
+                    if (item.classList.contains('flex')) {
+                        item.style.display = 'flex';
+                    } else {
+                        item.style.display = 'block';
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Initialize display
+        document.addEventListener('DOMContentLoaded', () => {
+            filterCategory('全部文章');
         });
     </script>
 </body>
