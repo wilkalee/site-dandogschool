@@ -47,49 +47,82 @@
             <div class="w-10"></div>
         </header>
 
-        <main class="flex-1 pb-48">
-            <section class="p-4 space-y-6">
-                <div class="bg-primary/10 border-l-4 border-primary p-6 rounded-r-3xl shadow-lg">
-                    <div class="flex gap-4">
-                        <span class="material-symbols-outlined text-primary text-4xl">notification_important</span>
-                        <div>
-                            <h3 class="font-black text-primary text-xl italic uppercase tracking-tighter">課前禁食通知</h3>
-                            <p class="text-sm text-white/70 mt-2 leading-relaxed italic">
-                                請確保課前 <span class="text-primary font-bold underline underline-offset-4">4 小時停止餵食</span>。
-                            </p>
+        <main class="flex-1 pb-48 p-4">
+            <section class="space-y-8">
+                <!-- Section 1: Preparation -->
+                <div class="space-y-4">
+                    <h2 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">01 / 上課前準備</h2>
+
+                    <div class="grid gap-4">
+                        <!-- Fasting -->
+                        <div class="bg-card-dark p-6 rounded-3xl border border-primary/10 flex gap-5 items-start">
+                            <div class="bg-primary/10 p-3 rounded-2xl shrink-0">
+                                <span class="material-symbols-outlined text-primary text-2xl">no_meals</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#fdfefe] mb-1">課前禁食</h3>
+                                <p class="text-sm text-white/60 leading-relaxed">上課前 <span
+                                        class="text-primary font-bold">4 小時</span> 不要給狗狗吃太多，確保上課時的食物獎勵能發揮最大效果。</p>
+                            </div>
+                        </div>
+
+                        <!-- Rewards Selection -->
+                        <div class="bg-card-dark p-6 rounded-3xl border border-primary/10 flex gap-5 items-start">
+                            <div class="bg-primary/10 p-3 rounded-2xl shrink-0">
+                                <span class="material-symbols-outlined text-primary text-2xl">star_rate</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#fdfefe] mb-1">挑選專屬獎勵</h3>
+                                <p class="text-sm text-white/60 leading-relaxed">找出 1-2 種狗狗 <span
+                                        class="text-primary font-bold">超愛</span> 的玩具或食物，平常先收起來，增加上課時的吸引力。</p>
+                            </div>
+                        </div>
+
+                        <!-- Walking -->
+                        <div class="bg-card-dark p-6 rounded-3xl border border-primary/10 flex gap-5 items-start">
+                            <div class="bg-primary/10 p-3 rounded-2xl shrink-0">
+                                <span class="material-symbols-outlined text-primary text-2xl">directions_walk</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-[#fdfefe] mb-1">課前消耗精力</h3>
+                                <p class="text-sm text-white/60 leading-relaxed">上課前請先帶狗狗散步 <span
+                                        class="text-primary font-bold">30 分鐘</span>，消耗過多精力，上課時更能專心練習。</p>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="space-y-4 pt-4">
-                    <h4 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">必備物品清單</h4>
+                <!-- Section 2: What to bring -->
+                <div class="space-y-4">
+                    <h2 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">02 / 上課必備物品</h2>
 
-                    <label
-                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
-                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
-                            type="checkbox" />
-                        <p
-                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
-                            準備 1-2 種超愛的小塊食物</p>
-                    </label>
+                    <div class="bg-primary/5 border border-primary/20 rounded-[2.5rem] p-8 space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="size-8 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <span
+                                    class="material-symbols-outlined text-background-dark text-lg font-bold">check</span>
+                            </div>
+                            <div class="font-bold text-lg">牽繩及胸背帶 <span
+                                    class="text-white/40 text-sm font-medium ml-2">(盡量不要用項圈)</span></div>
+                        </div>
 
-                    <label
-                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
-                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
-                            type="checkbox" />
-                        <p
-                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
-                            佩戴胸背帶 (Harness)</p>
-                    </label>
-
-                    <label
-                        class="flex items-center gap-5 bg-card-dark p-6 rounded-3xl border border-primary/10 transition-all cursor-pointer group">
-                        <input class="size-6 rounded border-primary text-primary focus:ring-0 bg-transparent"
-                            type="checkbox" />
-                        <p
-                            class="font-bold text-white group-hover:text-primary transition-colors italic tracking-tighter">
-                            課前散步與排泄</p>
-                    </label>
+                        <div class="flex items-start gap-4">
+                            <div class="size-8 rounded-full bg-primary flex items-center justify-center shrink-0 mt-1">
+                                <span
+                                    class="material-symbols-outlined text-background-dark text-lg font-bold">check</span>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="font-bold text-lg">狗狗超愛的食物或玩具</div>
+                                <div class="bg-background-dark/50 p-4 rounded-2xl border border-white/5">
+                                    <p class="text-xs text-primary font-bold mb-1 uppercase tracking-widest">💡 準備小秘訣
+                                    </p>
+                                    <p class="text-sm text-white/60 leading-relaxed">準備食物的話，要把食物剝成 <span
+                                            class="text-white font-bold underline underline-offset-4 decoration-primary">超小塊</span>，每塊大小接近一粒狗乾糧即可。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </main>
