@@ -57,28 +57,33 @@
         </header>
 
         <!-- Category Tabs -->
-        <div class="flex border-b border-primary/10 px-4 overflow-x-auto no-scrollbar gap-6">
-            <a class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap"
-                href="#">
-                <span class="text-sm font-bold tracking-wide">最新消息</span>
+        <div class="flex border-b border-primary/10 px-4 overflow-x-auto no-scrollbar gap-6" id="category-tabs">
+            <a href="#" data-tab="全部文章"
+                class="flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap">
+                <span class="text-sm font-bold tracking-wide">全部文章</span>
             </a>
-            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap"
-                href="#">
+            <a href="#" data-tab="最新消息"
+                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+                <span class="text-sm font-medium tracking-wide">最新消息</span>
+            </a>
+            <a href="#" data-tab="行為訓練"
+                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">行為訓練</span>
             </a>
-            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap"
-                href="#">
+            <a href="#" data-tab="日常護理"
+                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">日常護理</span>
             </a>
-            <a class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap"
-                href="#">
+            <a href="#" data-tab="其他知識"
+                class="flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">其他知識</span>
             </a>
         </div>
 
         <main class="flex-1 pb-32 p-4 space-y-8">
             <!-- Article: 自己的狗狗自己教 -->
-            <article class="bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8">
+            <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
+                data-categories="行為訓練 最新消息">
                 <div class="flex items-center justify-between">
                     <span
                         class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-widest border border-primary/20">行為訓練</span>
@@ -91,8 +96,9 @@
                     <h1 class="text-2xl font-bold leading-tight text-[#fdfefe] mb-4">自己的狗狗自己教</h1>
 
                     <div
-                        class="w-full aspect-[4/3] sm:aspect-video rounded-2xl overflow-hidden mb-5 border border-white/5">
-                        <img class="w-full h-full object-cover" src="dogtraining.jpg" alt="自己的狗狗自己教" />
+                        class="w-full aspect-[4/3] sm:aspect-video rounded-2xl overflow-hidden mb-5 border border-white/5 bg-background-dark flex items-center justify-center relative">
+                        <img class="w-full h-full object-cover relative z-10" src="./dogtraining.jpg" alt="自己的狗狗自己教"
+                            onerror="this.onerror=null; this.src='./dandan.jpg';" />
                     </div>
 
                     <div class="space-y-4 text-white/80 text-sm leading-relaxed">
@@ -114,8 +120,8 @@
                 <h2 class="text-lg font-bold text-[#fdfefe] pl-1">更多訓練專欄</h2>
                 <div class="grid grid-cols-1 gap-4">
                     <!-- Video 1 -->
-                    <div
-                        class="flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
+                    <div data-categories="日常護理"
+                        class="blog-item flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
                         <div class="relative w-32 aspect-video shrink-0 bg-background-dark rounded-xl overflow-hidden">
                             <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuApjl0K_-F1oPaDFvG-j4YXF0TKvX5JlagJ6viT3ctNeOpeGDIW1hlo4GpLlgbe45dmBVoe9tySAJZgBRad111H15EuwnT-ydKRsSfowoOagFJ9X68sie5pzyyL_HziFE2YVukMPReNFl3a-nazoFmBXa5GlmKQA4_A1ZMSCM1wCAb7uzGRdhe-4FGygaPAwRIpPtiAxnwKymaU4KbcQqoPMu0aMcxNJqhhMyobvIHkNT6TMFsnT39drgcVYkSumttLig3OUhRSObHP" />
@@ -140,8 +146,8 @@
                     </div>
 
                     <!-- Video 2 -->
-                    <div
-                        class="flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
+                    <div data-categories="行為訓練"
+                        class="blog-item flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
                         <div class="relative w-32 aspect-video shrink-0 bg-background-dark rounded-xl overflow-hidden">
                             <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLsx1qy8jZRTbpgdWGm2Qt2D51FtodIaTIANxbp7EWkP3KnkrQx10uA4AQZYJRKHJRrR8pRjLs_LgbwJprvqBK4b4aAdhbrvaJw2zBi0x9IDEpYQWH9g13tnLaf5to9Qrzog4Xol3vkfapiRo7k-srqWheljBLoeQaVuY8JKIFg17wir4sCuEnYtfRp0ip1Xn_QmgZmTbe37n3Po_RQDRvHOBgdyEHC2XtAy73U--li8y3UUdfUm4eUotwdg4u1jH347fD0NPSyv_Z" />
@@ -166,8 +172,8 @@
                     </div>
 
                     <!-- Video 3 -->
-                    <div
-                        class="flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
+                    <div data-categories="行為訓練 其他知識"
+                        class="blog-item flex gap-4 group bg-card-dark p-3 rounded-2xl border border-primary/5 hover:border-primary/20 transition-colors">
                         <div class="relative w-32 aspect-video shrink-0 bg-background-dark rounded-xl overflow-hidden">
                             <img class="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity"
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7O86Wk1LSVpw2cji3S5IiE-mokPFLfmvZmeIHQsvV83H3SO2B0OIGR0QVEnQPY9XqgR3JyP1lPScl3uJARVEvINiGnUiVcSXXs0XfTelEVGGMv09oBIIPpdPEzyibtGH1jFZnN2NJFGyhwwvNfBFg9nPTMlttdwO31fDXW-lE6Amhmhn71cRI86Rxwi8-kt8FyUgjmcCJhEe3tkswKFWHyac-Wh1p3p5Qiz5N2DX2dmaSA1rD8jkoPTWdiKSY73SiqibJ9DhmmLfF" />
@@ -224,6 +230,42 @@
             </div>
         </nav>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const tabs = document.querySelectorAll('#category-tabs a');
+            const items = document.querySelectorAll('.blog-item');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Reset tab styles
+                    tabs.forEach(t => {
+                        t.className = "flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap";
+                        t.querySelector('span').className = "text-sm font-medium tracking-wide";
+                    });
+
+                    // Active tab style
+                    tab.className = "flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap";
+                    tab.querySelector('span').className = "text-sm font-bold tracking-wide";
+
+                    const selectedCategory = tab.getAttribute('data-tab');
+
+                    // Filter posts
+                    items.forEach(item => {
+                        const categories = item.getAttribute('data-categories') || '';
+                        if (selectedCategory === '全部文章' || categories.includes(selectedCategory)) {
+                            item.style.display = 'flex'; // Use flex for videos
+                            if (item.tagName === 'ARTICLE') item.style.display = 'block'; // Block for articles
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
