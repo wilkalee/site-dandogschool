@@ -52,13 +52,21 @@
     <div
         class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
         <header
-            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
-            <button onclick="window.location.href='index.html'"
-                class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
-                <span class="material-symbols-outlined">arrow_back</span>
-            </button>
-            <h1 class="text-[#fdfefe] font-bold tracking-tight text-lg">課程講座</h1>
-            <div class="w-10"></div>
+            class="sticky top-0 z-50 flex flex-col items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 py-3 shadow-sm">
+            <div onclick="window.location.href='index.html'"
+                class="flex flex-col items-center justify-center text-center gap-1 mb-2 cursor-pointer">
+                <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-4xl">阿丹的狗學堂</h1>
+                <span class="text-[#fdfefe] text-[11px] font-semibold uppercase tracking-[0.2em] ml-1">Dandan's Dog
+                    School</span>
+            </div>
+            <div class="w-full flex items-center justify-between border-t border-primary/10 pt-2">
+                <button onclick="window.location.href='index.html'"
+                    class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
+                    <span class="material-symbols-outlined">arrow_back</span>
+                </button>
+                <h2 class="text-[#fdfefe] font-bold tracking-tight text-lg">課程講座</h2>
+                <div class="w-10"></div>
+            </div>
         </header>
 
         <main class="flex-1 pb-32">
