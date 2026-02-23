@@ -54,16 +54,35 @@
 
 <body class="bg-background-dark text-[#fdfefe] font-display min-h-screen">
     <div
-        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        class="relative flex min-h-screen w-full flex-col max-w-2xl md:max-w-6xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
         <header
-            class="sticky top-0 z-50 flex flex-col items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 py-3 shadow-sm">
-            <div onclick="window.location.href='index.html'"
-                class="flex flex-col items-center justify-center text-center gap-1 mb-2 cursor-pointer">
-                <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-4xl">阿丹的狗學堂</h1>
-                <span class="text-[#fdfefe] text-[11px] font-semibold uppercase tracking-[0.2em] ml-1">Dandan's Dog
-                    School</span>
+            class="sticky top-0 z-50 flex flex-col items-center bg-background-dark/95 backdrop-blur-md border-b border-primary/20 p-4 py-3 md:px-8 shadow-sm">
+            <div class="w-full flex flex-col md:flex-row items-center justify-between gap-4">
+                <div onclick="window.location.href='index.html'"
+                    class="flex flex-col items-center md:items-start justify-center text-center md:text-left gap-1 cursor-pointer">
+                    <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-3xl md:text-4xl">阿丹的狗學堂</h1>
+                    <span
+                        class="text-[#fdfefe] text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] ml-0.5">Dandan's
+                        Dog School</span>
+                </div>
+
+                <!-- Desktop Navigation Menu -->
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="index.html"
+                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">首頁</a>
+                    <a href="curriculum.html"
+                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">課程講座</a>
+                    <a href="preparation.html"
+                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">課前準備</a>
+                    <a href="blog.html"
+                        class="text-primary font-bold hover:opacity-80 transition-all text-sm tracking-widest uppercase">訓練專欄</a>
+                    <a href="booking.html"
+                        class="px-5 py-2.5 bg-primary/10 border border-primary/30 rounded-full text-primary font-bold hover:bg-primary/20 transition-all text-sm tracking-widest uppercase">我想預約</a>
+                </nav>
             </div>
-            <div class="w-full flex items-center justify-between border-t border-primary/10 pt-2">
+
+            <!-- Contextual Header (Mobile Back Button + Title) - Hidden on desktop -->
+            <div class="md:hidden w-full flex items-center justify-between border-t border-primary/10 pt-2 mt-2">
                 <button onclick="window.location.href='index.html'"
                     class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
                     <span class="material-symbols-outlined">arrow_back</span>
@@ -102,15 +121,18 @@
             </a>
         </div>
 
-        <main class="flex-1 pb-32 p-4 space-y-8">
+        <main
+            class="flex-1 pb-32 p-4 md:p-8 space-y-8 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 items-start">
             <!-- Empty state (shown when no items in selected category) -->
-            <div id="empty-state" class="hidden flex-col items-center justify-center py-20 gap-4 text-center">
+            <div id="empty-state"
+                class="hidden flex-col items-center justify-center py-20 gap-4 text-center md:col-span-2 lg:col-span-3">
                 <span class="material-symbols-outlined text-primary/30 text-6xl">campaign</span>
                 <p class="text-white/40 text-sm font-medium">目前尚無最新消息</p>
                 <p class="text-white/25 text-xs">有新消息時將會在此發布</p>
             </div>
             <!-- Article: 如何幫狗狗清潔牙齒--第三集 -->
-            <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
+            <article
+                class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8 md:mb-0"
                 data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
@@ -150,7 +172,8 @@
                 </div>
             </article>
             <!-- Article: 如何幫狗狗清潔牙齒--第二集 -->
-            <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
+            <article
+                class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8 md:mb-0"
                 data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
@@ -193,7 +216,8 @@
                 </div>
             </article>
             <!-- Article: 如何幫狗狗清潔牙齒--第一集 -->
-            <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
+            <article
+                class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8 md:mb-0"
                 data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
@@ -272,7 +296,7 @@
         </main>
 
         <nav
-            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+            class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
             <div class="flex justify-around items-end">
                 <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
                     href="index.html">

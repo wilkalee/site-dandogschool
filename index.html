@@ -50,14 +50,30 @@
 
 <body class="bg-background-dark text-[#fdfefe] font-display min-h-screen">
     <div
-        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        class="relative flex min-h-screen w-full flex-col max-w-2xl md:max-w-6xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
         <header
-            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 py-3 justify-center shadow-sm">
-            <div class="flex flex-col items-center justify-center text-center gap-1">
-                <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-4xl">阿丹的狗學堂</h1>
-                <span class="text-[#fdfefe] text-[11px] font-semibold uppercase tracking-[0.2em] ml-1">Dandan's Dog
-                    School</span>
+            class="sticky top-0 z-50 flex flex-col md:flex-row items-center bg-background-dark/95 backdrop-blur-md border-b border-primary/20 p-4 py-3 md:px-8 justify-between shadow-sm">
+            <div onclick="window.location.href='index.html'"
+                class="flex flex-col items-center md:items-start justify-center text-center md:text-left gap-1 cursor-pointer">
+                <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-3xl md:text-4xl">阿丹的狗學堂</h1>
+                <span
+                    class="text-[#fdfefe] text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] ml-0.5">Dandan's
+                    Dog School</span>
             </div>
+
+            <!-- Desktop Navigation Menu -->
+            <nav class="hidden md:flex items-center gap-8 ml-auto">
+                <a href="index.html"
+                    class="text-primary font-bold hover:opacity-80 transition-all text-sm tracking-widest uppercase">首頁</a>
+                <a href="curriculum.html"
+                    class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">課程講座</a>
+                <a href="preparation.html"
+                    class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">課前準備</a>
+                <a href="blog.html"
+                    class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">訓練專欄</a>
+                <a href="booking.html"
+                    class="px-5 py-2.5 bg-primary/10 border border-primary/30 rounded-full text-primary font-bold hover:bg-primary/20 transition-all text-sm tracking-widest uppercase">我想預約</a>
+            </nav>
         </header>
         <!-- Deployment Test Trigger -->
         <main class="flex-1 pb-32">
@@ -178,7 +194,7 @@
 
         <!-- 導覽列 -->
         <nav
-            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+            class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
             <div class="flex justify-around items-end">
                 <a class="flex flex-col items-center gap-1.5 text-primary" href="index.html">
                     <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
