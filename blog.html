@@ -72,13 +72,9 @@
 
         <!-- Category Tabs -->
         <div class="flex border-b border-primary/10 px-4 overflow-x-auto no-scrollbar gap-6" id="category-tabs">
-            <a href="javascript:void(0)" onclick="filterCategory('全部文章')" data-tab="全部文章"
-                class="category-tab flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap">
-                <span class="text-sm font-bold tracking-wide">全部文章</span>
-            </a>
             <a href="javascript:void(0)" onclick="filterCategory('最新消息')" data-tab="最新消息"
-                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
-                <span class="text-sm font-medium tracking-wide">最新消息</span>
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-primary text-primary pb-3 pt-3 whitespace-nowrap">
+                <span class="text-sm font-bold tracking-wide">最新消息</span>
             </a>
             <a href="javascript:void(0)" onclick="filterCategory('行為訓練')" data-tab="行為訓練"
                 class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
@@ -92,12 +88,22 @@
                 class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
                 <span class="text-sm font-medium tracking-wide">阿丹碎碎唸</span>
             </a>
+            <a href="javascript:void(0)" onclick="filterCategory('全部文章')" data-tab="全部文章"
+                class="category-tab flex flex-col items-center justify-center border-b-2 border-transparent text-white/60 hover:text-white/90 pb-3 pt-3 whitespace-nowrap">
+                <span class="text-sm font-medium tracking-wide">全部文章</span>
+            </a>
         </div>
 
         <main class="flex-1 pb-32 p-4 space-y-8">
+            <!-- Empty state (shown when no items in selected category) -->
+            <div id="empty-state" class="hidden flex-col items-center justify-center py-20 gap-4 text-center">
+                <span class="material-symbols-outlined text-primary/30 text-6xl">campaign</span>
+                <p class="text-white/40 text-sm font-medium">目前尚無最新消息</p>
+                <p class="text-white/25 text-xs">有新消息時將會在此發布</p>
+            </div>
             <!-- Article: 如何幫狗狗清潔牙齒--第三集 -->
             <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
-                data-categories="日常護理 最新消息">
+                data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
                         class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-widest border border-primary/20">日常護理</span>
@@ -137,7 +143,7 @@
             </article>
             <!-- Article: 如何幫狗狗清潔牙齒--第二集 -->
             <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
-                data-categories="日常護理 最新消息">
+                data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
                         class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-widest border border-primary/20">日常護理</span>
@@ -180,7 +186,7 @@
             </article>
             <!-- Article: 如何幫狗狗清潔牙齒--第一集 -->
             <article class="blog-item bg-card-dark p-6 rounded-3xl border border-primary/10 space-y-4 shadow-xl mb-8"
-                data-categories="日常護理 最新消息">
+                data-categories="日常護理">
                 <div class="flex items-center justify-between">
                     <span
                         class="text-xs font-semibold text-primary bg-primary/10 px-2 py-1 rounded uppercase tracking-widest border border-primary/20">日常護理</span>
@@ -292,6 +298,7 @@
         function filterCategory(selectedCategory) {
             const items = document.querySelectorAll('.blog-item');
             const tabs = document.querySelectorAll('.category-tab');
+            const articleCategories = ['行為訓練', '日常護理', '阿丹碎碎唸'];
 
             // 1. Update Tabs Styling
             tabs.forEach(tab => {
@@ -306,26 +313,33 @@
             });
 
             // 2. Filter Items
+            let visibleCount = 0;
             items.forEach(item => {
                 const itemCategories = item.getAttribute('data-categories') || '';
-                const isMatch = selectedCategory === '全部文章' || itemCategories.includes(selectedCategory);
+                let isMatch;
+                if (selectedCategory === '全部文章') {
+                    // 全部文章 = 行為訓練 + 日常護理 + 阿丹碎碎唸 (exclude 最新消息-only items)
+                    isMatch = articleCategories.some(cat => itemCategories.includes(cat));
+                } else {
+                    isMatch = itemCategories.includes(selectedCategory);
+                }
 
                 if (isMatch) {
-                    // Check if it's a video item (uses flex) or article (uses block)
-                    if (item.classList.contains('flex')) {
-                        item.style.display = 'flex';
-                    } else {
-                        item.style.display = 'block';
-                    }
+                    item.style.display = item.classList.contains('flex') ? 'flex' : 'block';
+                    visibleCount++;
                 } else {
                     item.style.display = 'none';
                 }
             });
+
+            // 3. Show empty state if no items
+            const emptyState = document.getElementById('empty-state');
+            if (emptyState) emptyState.style.display = visibleCount === 0 ? 'flex' : 'none';
         }
 
         // Initialize display
         document.addEventListener('DOMContentLoaded', () => {
-            filterCategory('全部文章');
+            filterCategory('最新消息');
         });
     </script>
 </body>
