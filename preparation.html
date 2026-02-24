@@ -50,49 +50,22 @@
 
 <body class="bg-background-dark text-[#fdfefe] font-display">
     <div
-        class="relative flex min-h-screen w-full flex-col max-w-2xl md:max-w-6xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
+        class="relative flex min-h-screen w-full flex-col max-w-2xl mx-auto overflow-x-hidden shadow-2xl bg-background-dark">
         <header
-            class="sticky top-0 z-50 flex flex-col items-center bg-background-dark/95 backdrop-blur-md border-b border-primary/20 p-4 py-3 md:px-8 shadow-sm">
-            <div class="w-full flex flex-col md:flex-row items-center justify-between gap-4">
-                <div onclick="window.location.href='index.html'"
-                    class="flex flex-col items-center md:items-start justify-center text-center md:text-left gap-1 cursor-pointer">
-                    <h1 class="text-[#c3a474] font-black tracking-[0.05em] text-3xl md:text-4xl">阿丹的狗學堂</h1>
-                    <span
-                        class="text-[#fdfefe] text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.2em] ml-0.5">Dandan's
-                        Dog School</span>
-                </div>
-
-                <!-- Desktop Navigation Menu -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="index.html"
-                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">首頁</a>
-                    <a href="curriculum.html"
-                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">課程講座</a>
-                    <a href="preparation.html"
-                        class="text-primary font-bold hover:opacity-80 transition-all text-sm tracking-widest uppercase">課前準備</a>
-                    <a href="blog.html"
-                        class="text-white/60 font-bold hover:text-primary transition-all text-sm tracking-widest uppercase">訓練專欄</a>
-                    <a href="booking.html"
-                        class="px-5 py-2.5 bg-primary/10 border border-primary/30 rounded-full text-primary font-bold hover:bg-primary/20 transition-all text-sm tracking-widest uppercase">我想預約</a>
-                </nav>
-            </div>
-
-            <!-- Contextual Header (Mobile Back Button + Title) - Hidden on desktop -->
-            <div class="md:hidden w-full flex items-center justify-between border-t border-primary/10 pt-2 mt-2">
-                <button onclick="window.location.href='index.html'"
-                    class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
-                    <span class="material-symbols-outlined">arrow_back</span>
-                </button>
-                <h2 class="text-[#fdfefe] font-bold tracking-tight text-lg">課前準備</h2>
-                <div class="w-10"></div>
-            </div>
+            class="sticky top-0 z-50 flex items-center bg-background-dark/90 backdrop-blur-md border-b border-primary/20 p-4 justify-between">
+            <button onclick="window.location.href='index.html'"
+                class="flex size-10 items-center justify-center rounded-full hover:bg-primary/10 cursor-pointer transition-colors text-primary">
+                <span class="material-symbols-outlined">arrow_back</span>
+            </button>
+            <h1 class="text-[#fdfefe] font-bold tracking-tight text-lg">課前準備</h1>
+            <div class="w-10"></div>
         </header>
 
         <main class="flex-1 pb-48 p-4">
             <section class="space-y-8">
                 <!-- Section 1: Preparation -->
                 <div class="space-y-4">
-                    <h2 class="text-xs font-black text-white/70 uppercase tracking-[0.3em] px-2 italic">01 / 上課前準備</h2>
+                    <h2 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">01 / 上課前準備</h2>
 
                     <div class="grid gap-4">
                         <!-- Fasting -->
@@ -135,7 +108,7 @@
 
                 <!-- Section 2: What to bring -->
                 <div class="space-y-4">
-                    <h2 class="text-xs font-black text-white/70 uppercase tracking-[0.3em] px-2 italic">02 / 上課必備物品</h2>
+                    <h2 class="text-xs font-black text-white/30 uppercase tracking-[0.3em] px-2 italic">02 / 上課必備物品</h2>
 
                     <div class="bg-primary/5 border border-primary/20 rounded-[2.5rem] p-8 space-y-6">
                         <div class="flex items-center gap-4">
@@ -168,11 +141,15 @@
             </section>
         </main>
 
-
-
+        <div class="fixed bottom-28 left-1/2 -translate-x-1/2 w-full max-w-2xl px-4 z-40">
+            <a href="https://line.me/ti/p/@370vbzff"
+                class="w-full bg-primary text-background-dark font-black py-5 rounded-2xl shadow-2xl flex items-center justify-center hover:opacity-90 active:scale-95 transition-all text-lg italic tracking-widest uppercase">
+                加入官方帳號
+            </a>
+        </div>
 
         <nav
-            class="md:hidden fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
+            class="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-2xl bg-background-dark/95 backdrop-blur-md border-t border-primary/20 px-4 pb-8 pt-4 z-[100] shadow-2xl">
             <div class="flex justify-around items-end">
                 <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
                     href="index.html">
@@ -182,7 +159,12 @@
                 <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
                     href="curriculum.html">
                     <span class="material-symbols-outlined">school</span>
-                    <p class="text-[10px] font-bold uppercase tracking-widest">課程講座</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">課程規劃</p>
+                </a>
+                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
+                    href="blog.html">
+                    <span class="material-symbols-outlined">article</span>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
                 </a>
                 <a class="flex flex-col items-center gap-1.5 text-primary" href="preparation.html">
                     <span class="material-symbols-outlined"
@@ -190,14 +172,9 @@
                     <p class="text-[10px] font-bold uppercase tracking-widest">課前準備</p>
                 </a>
                 <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
-                    href="blog.html">
-                    <span class="material-symbols-outlined">article</span>
-                    <p class="text-[10px] font-bold uppercase tracking-widest">訓練專欄</p>
-                </a>
-                <a class="flex flex-col items-center gap-1.5 text-white/40 hover:text-primary transition-all"
                     href="booking.html">
                     <span class="material-symbols-outlined">calendar_today</span>
-                    <p class="text-[10px] font-bold uppercase tracking-widest">我想預約</p>
+                    <p class="text-[10px] font-bold uppercase tracking-widest">預約課程</p>
                 </a>
             </div>
         </nav>
